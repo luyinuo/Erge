@@ -7,8 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "TableViewCell.h"
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScrollHeight self.mainScrollView.frame.size.height
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
+@property (weak, nonatomic) IBOutlet UITableView *oneTableView;
+@property (weak, nonatomic) IBOutlet UITableView *twoTableView;
+@property (weak, nonatomic) IBOutlet UITableView *threeTable;
+@property (nonatomic, strong) NSMutableArray *ergeArray;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *segmentButtons;
 
 @end
 
@@ -16,12 +25,74 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.oneTableView.rowHeight = 114;
+    self.twoTableView.rowHeight = 114;
+    self.threeTable.rowHeight = 114;
+    self.mainScrollView.delegate = self;
+    [self scrollViewDidEndDecelerating:self.mainScrollView];
+    [self loadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) loadData
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"source" ofType:@"plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *array = dic[@"erge"];
+    self.ergeArray = [NSMutableArray array];
+    NSMutableArray *tempArray;
+    for (NSInteger i = 0; i < array.count; i++) {
+        if (i%2 == 0) {
+            tempArray = [NSMutableArray array];
+            [tempArray addObject:array[i]];
+            if (i == array.count-1) {
+                [self.ergeArray addObject:tempArray];
+            }
+        }else if (i%2 == 1){
+            [tempArray addObject:array[i]];
+            [self.ergeArray addObject:tempArray];
+        }
+        
+    }
+    [self.oneTableView reloadData];
+    NSLog(@"%@",self.ergeArray);
 }
+
+- (IBAction)onClickSegmentButton:(UIButton *)sender {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.mainScrollView.contentOffset = CGPointMake(ScreenWidth * sender.tag, 0);
+        [self scrollViewDidEndDecelerating:self.mainScrollView];
+    }];
+    
+
+}
+#pragma mark - scrollview delegate
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView != self.mainScrollView) {
+        return;
+    }
+    NSInteger index = scrollView.contentOffset.x / ScreenWidth;
+    for (UIButton * button in self.segmentButtons) {
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    }
+    UIButton *button = self.segmentButtons[index];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+}
+#pragma mark - tableview datasource and delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return self.ergeArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+        TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ergeCell"];
+    if (!cell) {
+        cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ergeCell"];
+    }
+    
+    return cell;
+    
+}
+
 
 @end

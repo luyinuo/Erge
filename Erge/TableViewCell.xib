@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ergeCell" rowHeight="114" id="MLC-xZ-4nI" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MLC-xZ-4nI" id="eb4-cD-Atq">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Rn-Rw-VGm">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dW5-sM-QW1">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0d-3v-6bI">
+                                <rect key="frame" x="32" y="12" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="IbW-Kn-COJ"/>
+                                    <constraint firstAttribute="width" constant="120" id="Oc0-Yc-7R9"/>
+                                </constraints>
+                                <state key="normal" title="Button" backgroundImage="default">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dW5-sM-QW1" secondAttribute="trailing" id="Mkk-3J-ogj"/>
+                            <constraint firstAttribute="centerX" secondItem="L0d-3v-6bI" secondAttribute="centerX" id="TVp-Kp-Jih"/>
+                            <constraint firstAttribute="centerY" secondItem="L0d-3v-6bI" secondAttribute="centerY" id="Yfe-ly-2lH"/>
+                            <constraint firstAttribute="bottom" secondItem="dW5-sM-QW1" secondAttribute="bottom" id="bGB-A0-pde"/>
+                            <constraint firstItem="dW5-sM-QW1" firstAttribute="top" secondItem="2Rn-Rw-VGm" secondAttribute="top" id="tSK-tG-kDa"/>
+                            <constraint firstItem="dW5-sM-QW1" firstAttribute="leading" secondItem="2Rn-Rw-VGm" secondAttribute="leading" id="uo2-3b-SGc"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j05-QC-BSv">
+                        <rect key="frame" x="200" y="0.0" width="200" height="113"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyk-MN-BzN">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="113"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyx-yA-9Ds">
+                                <rect key="frame" x="40" y="12" width="120" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="21A-Gm-iTA"/>
+                                    <constraint firstAttribute="height" constant="90" id="3N7-uj-ZTF"/>
+                                </constraints>
+                                <state key="normal" title="Button" backgroundImage="default">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fyk-MN-BzN" secondAttribute="trailing" id="7oc-VX-ifa"/>
+                            <constraint firstAttribute="centerY" secondItem="Dyx-yA-9Ds" secondAttribute="centerY" id="7vz-kE-arf"/>
+                            <constraint firstAttribute="bottom" secondItem="fyk-MN-BzN" secondAttribute="bottom" id="PIL-bh-r6E"/>
+                            <constraint firstItem="fyk-MN-BzN" firstAttribute="top" secondItem="j05-QC-BSv" secondAttribute="top" id="Qo0-kz-w8k"/>
+                            <constraint firstItem="fyk-MN-BzN" firstAttribute="leading" secondItem="j05-QC-BSv" secondAttribute="leading" id="n4e-JV-H6X"/>
+                            <constraint firstAttribute="centerX" secondItem="Dyx-yA-9Ds" secondAttribute="centerX" id="pOo-4z-DlF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2Rn-Rw-VGm" secondAttribute="bottom" id="7tP-ap-1ra"/>
+                    <constraint firstAttribute="trailing" secondItem="j05-QC-BSv" secondAttribute="trailing" id="BEF-Q7-Z1g"/>
+                    <constraint firstItem="2Rn-Rw-VGm" firstAttribute="leading" secondItem="eb4-cD-Atq" secondAttribute="leading" id="Br8-VR-mPw"/>
+                    <constraint firstItem="j05-QC-BSv" firstAttribute="leading" secondItem="2Rn-Rw-VGm" secondAttribute="trailing" id="Xpp-ee-byh"/>
+                    <constraint firstItem="j05-QC-BSv" firstAttribute="leading" secondItem="2Rn-Rw-VGm" secondAttribute="trailing" id="Ysa-eb-j4d"/>
+                    <constraint firstItem="j05-QC-BSv" firstAttribute="top" secondItem="eb4-cD-Atq" secondAttribute="top" id="lgo-0b-yOo"/>
+                    <constraint firstItem="j05-QC-BSv" firstAttribute="width" secondItem="2Rn-Rw-VGm" secondAttribute="width" id="m01-oo-qhf"/>
+                    <constraint firstItem="2Rn-Rw-VGm" firstAttribute="top" secondItem="eb4-cD-Atq" secondAttribute="top" id="pgR-hl-ZAs"/>
+                    <constraint firstAttribute="bottom" secondItem="j05-QC-BSv" secondAttribute="bottom" id="uxi-rC-R9U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftView" destination="2Rn-Rw-VGm" id="XbB-FS-yDJ"/>
+                <outlet property="rightView" destination="j05-QC-BSv" id="qxr-1u-5XW"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="408"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default" width="370" height="138"/>
+    </resources>
+</document>
