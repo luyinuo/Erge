@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48D335921C4DD86400FBE6DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335911C4DD86400FBE6DF /* main.m */; };
+		48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335941C4DD86400FBE6DF /* AppDelegate.m */; };
+		48D335981C4DD86500FBE6DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335971C4DD86500FBE6DF /* ViewController.m */; };
+		48D3359B1C4DD86500FBE6DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D335991C4DD86500FBE6DF /* Main.storyboard */; };
+		48D3359D1C4DD86500FBE6DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D3359C1C4DD86500FBE6DF /* Images.xcassets */; };
+		48D335A01C4DD86500FBE6DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D3359E1C4DD86500FBE6DF /* LaunchScreen.xib */; };
+		48D335AC1C4DD86500FBE6DF /* ErgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335AB1C4DD86500FBE6DF /* ErgeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48D335A61C4DD86500FBE6DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48D335841C4DD86400FBE6DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48D3358B1C4DD86400FBE6DF;
+			remoteInfo = Erge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48D3358C1C4DD86400FBE6DF /* Erge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D335901C4DD86400FBE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D335911C4DD86400FBE6DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		48D335931C4DD86400FBE6DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		48D335941C4DD86400FBE6DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		48D335961C4DD86500FBE6DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		48D335971C4DD86500FBE6DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		48D3359A1C4DD86500FBE6DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48D3359C1C4DD86500FBE6DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		48D3359F1C4DD86500FBE6DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		48D335A51C4DD86500FBE6DF /* ErgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D335AA1C4DD86500FBE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D335AB1C4DD86500FBE6DF /* ErgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErgeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48D335891C4DD86400FBE6DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D335A21C4DD86500FBE6DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48D335831C4DD86400FBE6DF = {
+			isa = PBXGroup;
+			children = (
+				48D3358E1C4DD86400FBE6DF /* Erge */,
+				48D335A81C4DD86500FBE6DF /* ErgeTests */,
+				48D3358D1C4DD86400FBE6DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48D3358D1C4DD86400FBE6DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48D3358C1C4DD86400FBE6DF /* Erge.app */,
+				48D335A51C4DD86500FBE6DF /* ErgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48D3358E1C4DD86400FBE6DF /* Erge */ = {
+			isa = PBXGroup;
+			children = (
+				48D335931C4DD86400FBE6DF /* AppDelegate.h */,
+				48D335941C4DD86400FBE6DF /* AppDelegate.m */,
+				48D335961C4DD86500FBE6DF /* ViewController.h */,
+				48D335971C4DD86500FBE6DF /* ViewController.m */,
+				48D335991C4DD86500FBE6DF /* Main.storyboard */,
+				48D3359C1C4DD86500FBE6DF /* Images.xcassets */,
+				48D3359E1C4DD86500FBE6DF /* LaunchScreen.xib */,
+				48D3358F1C4DD86400FBE6DF /* Supporting Files */,
+			);
+			path = Erge;
+			sourceTree = "<group>";
+		};
+		48D3358F1C4DD86400FBE6DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48D335901C4DD86400FBE6DF /* Info.plist */,
+				48D335911C4DD86400FBE6DF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48D335A81C4DD86500FBE6DF /* ErgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				48D335AB1C4DD86500FBE6DF /* ErgeTests.m */,
+				48D335A91C4DD86500FBE6DF /* Supporting Files */,
+			);
+			path = ErgeTests;
+			sourceTree = "<group>";
+		};
+		48D335A91C4DD86500FBE6DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48D335AA1C4DD86500FBE6DF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48D3358B1C4DD86400FBE6DF /* Erge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D335AF1C4DD86500FBE6DF /* Build configuration list for PBXNativeTarget "Erge" */;
+			buildPhases = (
+				48D335881C4DD86400FBE6DF /* Sources */,
+				48D335891C4DD86400FBE6DF /* Frameworks */,
+				48D3358A1C4DD86400FBE6DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Erge;
+			productName = Erge;
+			productReference = 48D3358C1C4DD86400FBE6DF /* Erge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48D335A41C4DD86500FBE6DF /* ErgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D335B21C4DD86500FBE6DF /* Build configuration list for PBXNativeTarget "ErgeTests" */;
+			buildPhases = (
+				48D335A11C4DD86500FBE6DF /* Sources */,
+				48D335A21C4DD86500FBE6DF /* Frameworks */,
+				48D335A31C4DD86500FBE6DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48D335A71C4DD86500FBE6DF /* PBXTargetDependency */,
+			);
+			name = ErgeTests;
+			productName = ErgeTests;
+			productReference = 48D335A51C4DD86500FBE6DF /* ErgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48D335841C4DD86400FBE6DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = com.lyn;
+				TargetAttributes = {
+					48D3358B1C4DD86400FBE6DF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					48D335A41C4DD86500FBE6DF = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 48D3358B1C4DD86400FBE6DF;
+					};
+				};
+			};
+			buildConfigurationList = 48D335871C4DD86400FBE6DF /* Build configuration list for PBXProject "Erge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48D335831C4DD86400FBE6DF;
+			productRefGroup = 48D3358D1C4DD86400FBE6DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48D3358B1C4DD86400FBE6DF /* Erge */,
+				48D335A41C4DD86500FBE6DF /* ErgeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48D3358A1C4DD86400FBE6DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D3359B1C4DD86500FBE6DF /* Main.storyboard in Resources */,
+				48D335A01C4DD86500FBE6DF /* LaunchScreen.xib in Resources */,
+				48D3359D1C4DD86500FBE6DF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D335A31C4DD86500FBE6DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48D335881C4DD86400FBE6DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D335981C4DD86500FBE6DF /* ViewController.m in Sources */,
+				48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */,
+				48D335921C4DD86400FBE6DF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48D335A11C4DD86500FBE6DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D335AC1C4DD86500FBE6DF /* ErgeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48D335A71C4DD86500FBE6DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48D3358B1C4DD86400FBE6DF /* Erge */;
+			targetProxy = 48D335A61C4DD86500FBE6DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48D335991C4DD86500FBE6DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D3359A1C4DD86500FBE6DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48D3359E1C4DD86500FBE6DF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48D3359F1C4DD86500FBE6DF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48D335AD1C4DD86500FBE6DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48D335AE1C4DD86500FBE6DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48D335B01C4DD86500FBE6DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Erge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		48D335B11C4DD86500FBE6DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Erge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		48D335B31C4DD86500FBE6DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ErgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Erge.app/Erge";
+			};
+			name = Debug;
+		};
+		48D335B41C4DD86500FBE6DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ErgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Erge.app/Erge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48D335871C4DD86400FBE6DF /* Build configuration list for PBXProject "Erge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D335AD1C4DD86500FBE6DF /* Debug */,
+				48D335AE1C4DD86500FBE6DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48D335AF1C4DD86500FBE6DF /* Build configuration list for PBXNativeTarget "Erge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D335B01C4DD86500FBE6DF /* Debug */,
+				48D335B11C4DD86500FBE6DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48D335B21C4DD86500FBE6DF /* Build configuration list for PBXNativeTarget "ErgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48D335B31C4DD86500FBE6DF /* Debug */,
+				48D335B41C4DD86500FBE6DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48D335841C4DD86400FBE6DF /* Project object */;
+}
