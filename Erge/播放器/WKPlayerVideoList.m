@@ -7,8 +7,16 @@
 //
 
 #import "WKPlayerVideoList.h"
-#import "WKConfig.h"
+//设备屏幕尺寸
+#define mzScreenHeight   ([UIScreen mainScreen].bounds.size.height)
+#define mzScreenWidth    ([UIScreen mainScreen].bounds.size.width)
+#define mzThemeColorC2 [UIColor colorWithRed:191.00000f/255.00000f green:205.00000f/255.00000f blue:202.00000f/255.00000f alpha:1]
 
+//app的颜色C3
+#define mzThemeColorC3 [UIColor colorWithRed:129.00000f/255.00000f green:145.00000f/255.00000f blue:142.00000f/255.00000f alpha:1]
+
+//app的颜色C4
+#define mzThemeColorC4 [UIColor colorWithRed:94.00000f/255.00000f green:207.00000f/255.00000f blue:186.00000f/255.00000f alpha:1]
 @implementation WKPlayerVideoList{
     NSArray* videoList;
 }

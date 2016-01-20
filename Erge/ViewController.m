@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "TableViewCell.h"
+#import "VideoModel.h"
+#import "VideoViewController.h"
+
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScrollHeight self.mainScrollView.frame.size.height
 
@@ -30,25 +33,41 @@
     self.threeTable.rowHeight = 114;
     self.mainScrollView.delegate = self;
     [self scrollViewDidEndDecelerating:self.mainScrollView];
+    self.oneTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.twoTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.threeTable.separatorStyle = UITableViewCellSelectionStyleNone;
+    
     [self loadData];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
 - (void) loadData
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"source" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     NSArray *array = dic[@"erge"];
+    NSMutableArray *revertArray = [NSMutableArray array];
+    for (NSDictionary *dic in array) {
+        VideoModel *model = [VideoModel modelWithDic:dic];
+        [revertArray addObject:model];
+    }
     self.ergeArray = [NSMutableArray array];
     NSMutableArray *tempArray;
-    for (NSInteger i = 0; i < array.count; i++) {
+    for (NSInteger i = 0; i < revertArray.count; i++) {
         if (i%2 == 0) {
             tempArray = [NSMutableArray array];
-            [tempArray addObject:array[i]];
+            [tempArray addObject:revertArray[i]];
             if (i == array.count-1) {
                 [self.ergeArray addObject:tempArray];
             }
         }else if (i%2 == 1){
-            [tempArray addObject:array[i]];
+            [tempArray addObject:revertArray[i]];
             [self.ergeArray addObject:tempArray];
         }
         
@@ -56,6 +75,7 @@
     [self.oneTableView reloadData];
     NSLog(@"%@",self.ergeArray);
 }
+
 
 - (IBAction)onClickSegmentButton:(UIButton *)sender {
     [UIView animateWithDuration:0.5 animations:^{
@@ -65,6 +85,8 @@
     
 
 }
+
+
 #pragma mark - scrollview delegate
 - (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
@@ -78,6 +100,7 @@
     UIButton *button = self.segmentButtons[index];
     [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
 }
+
 #pragma mark - tableview datasource and delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -85,11 +108,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-        TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ergeCell"];
+    
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ergeCell"];
     if (!cell) {
         cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ergeCell"];
     }
-    
+    cell.models = self.ergeArray[indexPath.row];
+    cell.clickPlayerOperation = ^(VideoModel *model){
+        VideoViewController *controler = [[VideoViewController alloc] init];
+        controler.targetModel = model;
+        [self presentViewController:controler animated:YES completion:nil];
+    };
     return cell;
     
 }

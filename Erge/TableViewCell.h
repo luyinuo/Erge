@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VideoModel.h"
+
 
 @interface TableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *leftView;
 @property (weak, nonatomic) IBOutlet UIView *rightView;
+@property (nonatomic, strong) NSArray *models;
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+
+@property (copy, nonatomic) void (^clickPlayerOperation)(VideoModel *model);
 
 @end

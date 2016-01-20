@@ -43,6 +43,9 @@
 		48D335F01C4E40F300FBE6DF /* player_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48D335EE1C4E40F300FBE6DF /* player_pause@3x.png */; };
 		48D335F31C4E418D00FBE6DF /* player_screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48D335F11C4E418D00FBE6DF /* player_screen@2x.png */; };
 		48D335F41C4E418D00FBE6DF /* player_screen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48D335F21C4E418D00FBE6DF /* player_screen@3x.png */; };
+		48D335F91C4F348F00FBE6DF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335F81C4F348F00FBE6DF /* Reachability.m */; };
+		48D335FC1C4F389300FBE6DF /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335FB1C4F389300FBE6DF /* VideoModel.m */; };
+		48D335FF1C4F797400FBE6DF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335FE1C4F797400FBE6DF /* VideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,12 @@
 		48D335EE1C4E40F300FBE6DF /* player_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pause@3x.png"; sourceTree = "<group>"; };
 		48D335F11C4E418D00FBE6DF /* player_screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_screen@2x.png"; sourceTree = "<group>"; };
 		48D335F21C4E418D00FBE6DF /* player_screen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_screen@3x.png"; sourceTree = "<group>"; };
+		48D335F71C4F348F00FBE6DF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		48D335F81C4F348F00FBE6DF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		48D335FA1C4F389300FBE6DF /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		48D335FB1C4F389300FBE6DF /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
+		48D335FD1C4F797400FBE6DF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoViewController.h; path = "播放器/VideoViewController.h"; sourceTree = "<group>"; };
+		48D335FE1C4F797400FBE6DF /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoViewController.m; path = "播放器/VideoViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,14 +157,19 @@
 				48D335941C4DD86400FBE6DF /* AppDelegate.m */,
 				48D335961C4DD86500FBE6DF /* ViewController.h */,
 				48D335971C4DD86500FBE6DF /* ViewController.m */,
+				48D335FD1C4F797400FBE6DF /* VideoViewController.h */,
+				48D335FE1C4F797400FBE6DF /* VideoViewController.m */,
 				48D335B81C4E23CF00FBE6DF /* TableViewCell.h */,
 				48D335B91C4E23CF00FBE6DF /* TableViewCell.m */,
 				48D335BB1C4E2D0700FBE6DF /* TableViewCell.xib */,
 				48D335991C4DD86500FBE6DF /* Main.storyboard */,
 				48D3359C1C4DD86500FBE6DF /* Images.xcassets */,
 				48D3359E1C4DD86500FBE6DF /* LaunchScreen.xib */,
+				48D335F51C4F347600FBE6DF /* Framework */,
 				48D3358F1C4DD86400FBE6DF /* Supporting Files */,
 				48D335B61C4E150E00FBE6DF /* source.plist */,
+				48D335FA1C4F389300FBE6DF /* VideoModel.h */,
+				48D335FB1C4F389300FBE6DF /* VideoModel.m */,
 			);
 			path = Erge;
 			sourceTree = "<group>";
@@ -220,6 +234,23 @@
 				48D335C51C4E3B0000FBE6DF /* WKMPMoviePlayerController.m */,
 			);
 			path = "播放器";
+			sourceTree = "<group>";
+		};
+		48D335F51C4F347600FBE6DF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				48D335F61C4F348F00FBE6DF /* Reachability */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		48D335F61C4F348F00FBE6DF /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				48D335F71C4F348F00FBE6DF /* Reachability.h */,
+				48D335F81C4F348F00FBE6DF /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,10 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D335FF1C4F797400FBE6DF /* VideoViewController.m in Sources */,
 				48D335981C4DD86500FBE6DF /* ViewController.m in Sources */,
 				48D335BA1C4E23CF00FBE6DF /* TableViewCell.m in Sources */,
+				48D335F91C4F348F00FBE6DF /* Reachability.m in Sources */,
 				48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */,
 				48D335921C4DD86400FBE6DF /* main.m in Sources */,
+				48D335FC1C4F389300FBE6DF /* VideoModel.m in Sources */,
 				48D335C91C4E3B0000FBE6DF /* WKPlayerVolume.m in Sources */,
 				48D335CA1C4E3B0000FBE6DF /* WKMPMoviePlayerController.m in Sources */,
 				48D335C81C4E3B0000FBE6DF /* WKPlayerVideoList.m in Sources */,
