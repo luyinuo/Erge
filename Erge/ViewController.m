@@ -95,10 +95,10 @@
     }
     NSInteger index = scrollView.contentOffset.x / ScreenWidth;
     for (UIButton * button in self.segmentButtons) {
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor colorWithRed:178 green:76 blue:52 alpha:1] forState:UIControlStateNormal];
     }
     UIButton *button = self.segmentButtons[index];
-    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
 }
 
 #pragma mark - tableview datasource and delegate

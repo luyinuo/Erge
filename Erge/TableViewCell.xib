@@ -24,11 +24,17 @@
                                     <constraint firstAttribute="height" constant="90" id="IbW-Kn-COJ"/>
                                     <constraint firstAttribute="width" constant="120" id="Oc0-Yc-7R9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                 <state key="normal" title="Button" backgroundImage="default">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.11998722730612776" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clickPlayerBtn:" destination="MLC-xZ-4nI" eventType="touchUpInside" id="MU8-Fh-HO1"/>
                                 </connections>
@@ -56,11 +62,17 @@
                                     <constraint firstAttribute="width" constant="120" id="21A-Gm-iTA"/>
                                     <constraint firstAttribute="height" constant="90" id="3N7-uj-ZTF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                 <state key="normal" title="Button" backgroundImage="default">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.1199872273" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clickPlayerBtn:" destination="MLC-xZ-4nI" eventType="touchUpInside" id="o4z-Su-e7g"/>
                                 </connections>

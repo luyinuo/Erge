@@ -65,7 +65,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerDidPlayFinish:) name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayerController];
     
-    NSString* url = @"http://res2.lefun.net.cn/nnm/res/nnm1.mp4";//model.url;
+    NSString* url = self.targetModel.url;
     
     [moviePlayerController performSelector:@selector(playVideoWithUrl:) withObject:url afterDelay:0.1];
 //    moviePlayerController.wkPlayerVideoList.nowIndex = indexPath.row;
