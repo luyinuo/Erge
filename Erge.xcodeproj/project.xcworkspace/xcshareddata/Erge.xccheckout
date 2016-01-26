@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AC85100D-2C5B-4BB0-BFD9-3192B50BE7B3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Erge</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>40A28D65A041B71BBF9254382003F9F79309D3B5</key>
 		<string>https://github.com/luyinuo/Erge.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Erge.xcodeproj</string>
+	<string>Erge.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>40A28D65A041B71BBF9254382003F9F79309D3B5</key>

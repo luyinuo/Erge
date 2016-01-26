@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		487D59601C5772CA00F3A4FF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D595F1C5772CA00F3A4FF /* MineViewController.m */; };
+		487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59621C577C5600F3A4FF /* BaseViewController.m */; };
 		48D335921C4DD86400FBE6DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335911C4DD86400FBE6DF /* main.m */; };
 		48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335941C4DD86400FBE6DF /* AppDelegate.m */; };
 		48D335981C4DD86500FBE6DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335971C4DD86500FBE6DF /* ViewController.m */; };
@@ -59,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		487D595E1C5772CA00F3A4FF /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		487D595F1C5772CA00F3A4FF /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		487D59611C577C5600F3A4FF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		487D59621C577C5600F3A4FF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		48D3358C1C4DD86400FBE6DF /* Erge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D335901C4DD86400FBE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D335911C4DD86400FBE6DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,8 +161,12 @@
 				48D335BD1C4E3AF200FBE6DF /* 播放器 */,
 				48D335931C4DD86400FBE6DF /* AppDelegate.h */,
 				48D335941C4DD86400FBE6DF /* AppDelegate.m */,
+				487D59611C577C5600F3A4FF /* BaseViewController.h */,
+				487D59621C577C5600F3A4FF /* BaseViewController.m */,
 				48D335961C4DD86500FBE6DF /* ViewController.h */,
 				48D335971C4DD86500FBE6DF /* ViewController.m */,
+				487D595E1C5772CA00F3A4FF /* MineViewController.h */,
+				487D595F1C5772CA00F3A4FF /* MineViewController.m */,
 				48D335FD1C4F797400FBE6DF /* VideoViewController.h */,
 				48D335FE1C4F797400FBE6DF /* VideoViewController.m */,
 				48D335B81C4E23CF00FBE6DF /* TableViewCell.h */,
@@ -379,10 +389,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D335FF1C4F797400FBE6DF /* VideoViewController.m in Sources */,
+				487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */,
 				48D335981C4DD86500FBE6DF /* ViewController.m in Sources */,
 				48D335BA1C4E23CF00FBE6DF /* TableViewCell.m in Sources */,
 				48D335F91C4F348F00FBE6DF /* Reachability.m in Sources */,
 				48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */,
+				487D59601C5772CA00F3A4FF /* MineViewController.m in Sources */,
 				48D335921C4DD86400FBE6DF /* main.m in Sources */,
 				48D335FC1C4F389300FBE6DF /* VideoModel.m in Sources */,
 				48D335C91C4E3B0000FBE6DF /* WKPlayerVolume.m in Sources */,
@@ -516,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Erge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -526,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Erge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -584,6 +598,7 @@
 				48D335B11C4DD86500FBE6DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48D335B21C4DD86500FBE6DF /* Build configuration list for PBXNativeTarget "ErgeTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +607,7 @@
 				48D335B41C4DD86500FBE6DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

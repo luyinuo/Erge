@@ -16,6 +16,9 @@
 @property (nonatomic, strong) NSArray *models;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UILabel *leftTitle;
+@property (weak, nonatomic) IBOutlet UILabel *rightTitle;
+
 
 @property (copy, nonatomic) void (^clickPlayerOperation)(VideoModel *model);
 

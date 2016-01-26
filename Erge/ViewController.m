@@ -36,17 +36,11 @@
     self.oneTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.twoTableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.threeTable.separatorStyle = UITableViewCellSelectionStyleNone;
+    [self setTabBarItemIcon:@"icon_home_h"];
     
     [self loadData];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-- (BOOL)prefersStatusBarHidden
-{
-    return NO;
-}
 - (void) loadData
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"source" ofType:@"plist"];
@@ -76,16 +70,12 @@
     NSLog(@"%@",self.ergeArray);
 }
 
-
 - (IBAction)onClickSegmentButton:(UIButton *)sender {
     [UIView animateWithDuration:0.5 animations:^{
         self.mainScrollView.contentOffset = CGPointMake(ScreenWidth * sender.tag, 0);
         [self scrollViewDidEndDecelerating:self.mainScrollView];
     }];
-    
-
 }
-
 
 #pragma mark - scrollview delegate
 - (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -95,10 +85,11 @@
     }
     NSInteger index = scrollView.contentOffset.x / ScreenWidth;
     for (UIButton * button in self.segmentButtons) {
-        [button setTitleColor:[UIColor colorWithRed:178 green:76 blue:52 alpha:1] forState:UIControlStateNormal];
+        UIColor *color = [UIColor colorWithRed:251/255.0 green:156/255.0 blue:151/255.0 alpha:1];
+        [button setTitleColor:color forState:UIControlStateNormal];
     }
     UIButton *button = self.segmentButtons[index];
-    [button setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithRed:158/255.0 green:59/255.0 blue:59/255.0 alpha:1] forState:UIControlStateNormal];
 }
 
 #pragma mark - tableview datasource and delegate

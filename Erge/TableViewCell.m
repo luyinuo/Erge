@@ -36,6 +36,7 @@
         self.clickPlayerOperation(model);
     }
 }
+
 - (void)setModels:(NSArray *)models
 {
     _models = models;
@@ -43,11 +44,10 @@
     VideoModel *rightModel = models.count > 1?models[1]:nil;
     self.rightView.hidden = !rightModel;
     
-    [self.leftButton setTitle:leftModel.name forState:UIControlStateNormal];
+    self.leftTitle.text = leftModel.name;
     [self.leftButton setBackgroundImage:[UIImage imageNamed:leftModel.avatar] forState:UIControlStateNormal];
-    [self.rightButton setTitle:rightModel?rightModel.name:@"" forState:UIControlStateNormal];
+    self.rightTitle.text = rightModel?rightModel.name:@"";
     [self.rightButton setBackgroundImage:[UIImage imageNamed:rightModel?rightModel.avatar:@""] forState:UIControlStateNormal];
     
 }
-
 @end

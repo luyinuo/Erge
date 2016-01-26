@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S0l-5A-GEC">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--歌吧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,38 +20,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="nIb-CP-QrR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="nIb-CP-QrR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1P-It-wOi">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-O8-siR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-O8-siR">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="儿歌">
+                                            <color key="titleColor" red="0.84182146542827641" green="0.61155830753353968" blue="0.59182146542827652" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
                                         <connections>
                                             <action selector="onClickSegmentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLZ-ck-66F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgr-9C-td8">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgr-9C-td8">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="童谣">
+                                            <color key="titleColor" red="0.84182146540000002" green="0.61155830749999995" blue="0.59182146540000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
                                         <connections>
                                             <action selector="onClickSegmentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rbf-bC-lkd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zia-dz-hnK">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zia-dz-hnK">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="好习惯">
+                                            <color key="titleColor" red="0.84182146540000002" green="0.61155830749999995" blue="0.59182146540000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
                                         <connections>
                                             <action selector="onClickSegmentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qEB-tX-LYH"/>
                                         </connections>
@@ -241,6 +255,7 @@
                             <constraint firstItem="pfs-w4-Nab" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="AGq-5U-fjG"/>
                             <constraint firstItem="nIb-CP-QrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BRf-s8-uGs"/>
                             <constraint firstItem="Mti-GD-tBA" firstAttribute="width" secondItem="pfs-w4-Nab" secondAttribute="width" id="D24-1l-cng"/>
+                            <constraint firstItem="nIb-CP-QrR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GWx-Sn-Ti4"/>
                             <constraint firstItem="nIb-CP-QrR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JYS-7K-weh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wja-8g-WMP" secondAttribute="bottom" id="KMl-5C-c9I"/>
                             <constraint firstItem="V1P-It-wOi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UmJ-MJ-Jyh"/>
@@ -258,6 +273,7 @@
                             <constraint firstAttribute="trailing" secondItem="nIb-CP-QrR" secondAttribute="trailing" id="nAd-bh-YfX"/>
                             <constraint firstAttribute="trailing" secondItem="V1P-It-wOi" secondAttribute="trailing" id="qbU-g4-cdX"/>
                             <constraint firstAttribute="trailing" secondItem="pfs-w4-Nab" secondAttribute="trailing" id="quQ-8L-Li1"/>
+                            <constraint firstItem="nIb-CP-QrR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rvE-WQ-mqr"/>
                             <constraint firstItem="wja-8g-WMP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="xr3-1t-164"/>
                             <constraint firstItem="pfs-w4-Nab" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yaN-wm-FyQ"/>
                             <constraint firstItem="cMR-zP-c2J" firstAttribute="width" secondItem="pfs-w4-Nab" secondAttribute="width" id="yxi-9A-Ijb"/>
@@ -275,9 +291,11 @@
                                 <exclude reference="qbU-g4-cdX"/>
                                 <exclude reference="5qq-PW-df2"/>
                                 <exclude reference="BRf-s8-uGs"/>
+                                <exclude reference="GWx-Sn-Ti4"/>
                                 <exclude reference="JYS-7K-weh"/>
                                 <exclude reference="Ve4-tl-LAL"/>
                                 <exclude reference="nAd-bh-YfX"/>
+                                <exclude reference="rvE-WQ-mqr"/>
                                 <exclude reference="AGq-5U-fjG"/>
                                 <exclude reference="eGD-Qx-xpN"/>
                                 <exclude reference="gau-wl-NkO"/>
@@ -307,9 +325,11 @@
                                 <include reference="qbU-g4-cdX"/>
                                 <include reference="5qq-PW-df2"/>
                                 <include reference="BRf-s8-uGs"/>
+                                <include reference="GWx-Sn-Ti4"/>
                                 <exclude reference="JYS-7K-weh"/>
-                                <include reference="Ve4-tl-LAL"/>
+                                <exclude reference="Ve4-tl-LAL"/>
                                 <include reference="nAd-bh-YfX"/>
+                                <exclude reference="rvE-WQ-mqr"/>
                                 <include reference="AGq-5U-fjG"/>
                                 <include reference="eGD-Qx-xpN"/>
                                 <include reference="gau-wl-NkO"/>
@@ -327,7 +347,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jZv-Mr-vy2"/>
+                    <tabBarItem key="tabBarItem" title="歌吧" image="icon_home_n" id="jZv-Mr-vy2"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="mainScrollView" destination="wja-8g-WMP" id="NGM-rJ-Dcq"/>
@@ -362,10 +382,10 @@
             </objects>
             <point key="canvasLocation" x="253.5" y="381"/>
         </scene>
-        <!--Item-->
+        <!--游乐中心-->
         <scene sceneID="TeO-Rj-Rlr">
             <objects>
-                <viewController id="9K2-4g-Epe" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="9K2-4g-Epe" customClass="MineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fhA-JV-908"/>
                         <viewControllerLayoutGuide type="bottom" id="1qD-Gm-f6F"/>
@@ -373,9 +393,42 @@
                     <view key="view" contentMode="scaleToFill" id="OjC-DP-rNx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ybt-UR-OeL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ybt-UR-OeL" secondAttribute="bottom" id="6hh-V7-dVA"/>
+                            <constraint firstItem="Ybt-UR-OeL" firstAttribute="top" secondItem="OjC-DP-rNx" secondAttribute="top" id="FQp-uE-Irj"/>
+                            <constraint firstItem="Ybt-UR-OeL" firstAttribute="leading" secondItem="OjC-DP-rNx" secondAttribute="leading" id="G25-BL-SbX"/>
+                            <constraint firstAttribute="trailing" secondItem="Ybt-UR-OeL" secondAttribute="trailing" id="HRw-Df-ZXd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ybt-UR-OeL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6hh-V7-dVA"/>
+                                <exclude reference="FQp-uE-Irj"/>
+                                <exclude reference="G25-BL-SbX"/>
+                                <exclude reference="HRw-Df-ZXd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ybt-UR-OeL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6hh-V7-dVA"/>
+                                <include reference="FQp-uE-Irj"/>
+                                <include reference="G25-BL-SbX"/>
+                                <include reference="HRw-Df-ZXd"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2tZ-nK-tqa"/>
+                    <tabBarItem key="tabBarItem" title="游乐中心" image="icon_mine_n" id="2tZ-nK-tqa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2g-x6-VG0" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,7 +436,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="320" height="480"/>
+        <image name="background" width="375" height="667"/>
+        <image name="icon_home_n" width="30" height="30"/>
+        <image name="icon_mine_n" width="30" height="30"/>
         <image name="tabbar" width="320" height="49"/>
     </resources>
 </document>
