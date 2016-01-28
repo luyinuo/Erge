@@ -10,7 +10,7 @@
 #import "WKMPMoviePlayerController.h"
 
 @interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate>
-
+@property (nonatomic, strong) NSMutableDictionary *downloadDic;
 @end
 
 @implementation VideoViewController{
@@ -18,9 +18,30 @@
     WKMPMoviePlayerController *moviePlayerController;
 }
 
+- (NSMutableDictionary *) downloadDic
+{
+    _downloadDic = [[NSMutableDictionary alloc] initWithContentsOfFile:downloadPath];
+    if (_downloadDic) {
+        _downloadDic = [NSMutableDictionary dictionary];
+    }
+    return _downloadDic;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadMoviePlayer];
+    //返回按钮
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(20, 20, 50, 44);
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [self.view addSubview:backBtn];
+    [backBtn addTarget:self action:@selector(tapBack) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *downloadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    downloadBtn.frame = CGRectMake(90, 20, 50, 44);
+    [downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
+    [self.view addSubview:downloadBtn];
+    [downloadBtn addTarget:self action:@selector(clickDownload) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -32,6 +53,27 @@
     return YES;
 }
 
+- (void) tapBack
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) clickDownload
+{
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
+    [tempDic setObject:self.targetModel.url forKey:@"url"];
+    [tempDic setObject:self.targetModel.name forKey:@"name"];
+    [tempDic setObject:self.targetModel.avatar forKey:@"avatar"];
+    [tempDic setObject:self.targetModel.identity forKey:@"id"];
+    [tempDic setObject:@0 forKey:@"percent"];
+    [self.downloadDic setObject:tempDic forKey:self.targetModel.identity];
+    
+    //下载列表写入文件
+    if (![[NSFileManager defaultManager] isExecutableFileAtPath:downloadPath]) {
+        
+    }
+    
+}
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		487D59601C5772CA00F3A4FF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D595F1C5772CA00F3A4FF /* MineViewController.m */; };
 		487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59621C577C5600F3A4FF /* BaseViewController.m */; };
+		487D59661C5A16C400F3A4FF /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59651C5A16C400F3A4FF /* Config.m */; };
 		48D335921C4DD86400FBE6DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335911C4DD86400FBE6DF /* main.m */; };
 		48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335941C4DD86400FBE6DF /* AppDelegate.m */; };
 		48D335981C4DD86500FBE6DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335971C4DD86500FBE6DF /* ViewController.m */; };
@@ -65,6 +66,8 @@
 		487D595F1C5772CA00F3A4FF /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		487D59611C577C5600F3A4FF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		487D59621C577C5600F3A4FF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		487D59641C5A16C400F3A4FF /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		487D59651C5A16C400F3A4FF /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		48D3358C1C4DD86400FBE6DF /* Erge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D335901C4DD86400FBE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D335911C4DD86400FBE6DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				48D335BD1C4E3AF200FBE6DF /* 播放器 */,
 				48D335931C4DD86400FBE6DF /* AppDelegate.h */,
 				48D335941C4DD86400FBE6DF /* AppDelegate.m */,
+				487D59641C5A16C400F3A4FF /* Config.h */,
+				487D59651C5A16C400F3A4FF /* Config.m */,
 				487D59611C577C5600F3A4FF /* BaseViewController.h */,
 				487D59621C577C5600F3A4FF /* BaseViewController.m */,
 				48D335961C4DD86500FBE6DF /* ViewController.h */,
@@ -389,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D335FF1C4F797400FBE6DF /* VideoViewController.m in Sources */,
+				487D59661C5A16C400F3A4FF /* Config.m in Sources */,
 				487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */,
 				48D335981C4DD86500FBE6DF /* ViewController.m in Sources */,
 				48D335BA1C4E23CF00FBE6DF /* TableViewCell.m in Sources */,

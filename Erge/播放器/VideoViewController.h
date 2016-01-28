@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VideoModel.h"
+#import "Config.h"
 
 @interface VideoViewController : UIViewController
 @property (nonatomic, strong) VideoModel* targetModel;

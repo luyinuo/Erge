@@ -56,10 +56,10 @@
 {
     if (!_rateArrays) {
         _rateArrays = [NSMutableArray array];
-        [_rateArrays addObjectsFromArray:@[@{@"title":@"2.0倍速",@"rate":@(2.0)},
-                                           @{@"title":@"1.5倍速",@"rate":@(1.5)},
-                                           @{@"title":@"1.25倍速",@"rate":@(1.25)},
-                                           @{@"title":@"1.0倍速",@"rate":@(1.0)}]];
+        [_rateArrays addObjectsFromArray:@[@{@"title":@"⚡️光速闪过",@"rate":@(2.5)},
+                                           @{@"title":@"😫来不及了",@"rate":@(2.0)},
+                                           @{@"title":@"😖宝宝尿急",@"rate":@(1.5)},
+                                           @{@"title":@"正常",@"rate":@(1.0)}]];
     }
     return _rateArrays;
 }
@@ -72,7 +72,12 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayerLoadStateDidChange:) name:MPMoviePlayerLoadStateDidChangeNotification object:self];
 
-        [self.view setFrame:CGRectMake(0, mzIos7Later?20+44:44, mzScreenWidth, mzScreenWidth/16.00*9.00)];
+//        [self.view setFrame:CGRectMake(0, mzIos7Later?20+44:44, mzScreenWidth, mzScreenWidth/16.00*9.00)];
+        CGFloat height = mzScreenWidth/16.00*9.00;
+        CGFloat width = mzScreenWidth;
+        CGFloat frameX = 0;
+        CGFloat frameY = (mzScreenHeight- height)/2.0;
+        [self.view setFrame:CGRectMake(frameX, frameY, width, height)];
     
         //加载loading
         _viewPlayerLoading = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-15, self.view.frame.size.height/2-15, 30, 30)];
@@ -135,7 +140,7 @@
         //初始化倍速
         currentRateButton = (UIButton*)[controlsBox viewWithTag:215];
         [currentRateButton addTarget:self action:@selector(showRateView) forControlEvents:UIControlEventTouchUpInside];
-        [currentRateButton setTitle:@"1.0倍速" forState:UIControlStateNormal];
+        [currentRateButton setTitle:@"正常" forState:UIControlStateNormal];
         rateBackgroundView = [controlsBox viewWithTag:216];
         UIButton *button1 = (UIButton*)[rateBackgroundView viewWithTag:217];
         UIButton *button2 = (UIButton*)[rateBackgroundView viewWithTag:218];
@@ -303,7 +308,10 @@
                 [self.view addSubview:volumeView];
                 
                 //加载第一次进入的引导层
-                if (YES) {//[WKNetWork sharedNetWork].isPlayerYd
+                BOOL isFirst = [[NSUserDefaults standardUserDefaults] boolForKey:@"isFirstLoadFullScreen"];
+                if (!isFirst) {//[WKNetWork sharedNetWork].isPlayerYd
+                    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isFirstLoadFullScreen"];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
                     
                     ydView = [[[NSBundle mainBundle] loadNibNamed:@"courseInfoYd" owner:nil options:nil] objectAtIndex:0];
                     [ydView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapYdView)]];
@@ -325,7 +333,12 @@
             [UIView animateWithDuration:0.4 animations:^{
                 
                 [self.view setTransform:CGAffineTransformIdentity];
-                [self.view setFrame:CGRectMake(0, mzIos7Later?20+44:0+44, mzScreenWidth, mzScreenWidth/16.00*9.00)];
+                CGFloat height = mzScreenWidth/16.00*9.00;
+                CGFloat width = mzScreenWidth;
+                CGFloat frameX = 0;
+                CGFloat frameY = (mzScreenHeight- height)/2.0;
+//                [self.view setFrame:CGRectMake(0, mzIos7Later?20+44:0+44, mzScreenWidth, mzScreenWidth/16.00*9.00)];
+                [self.view setFrame:CGRectMake(frameX, frameY, width, height)];
                 
             } completion:^(BOOL finished) {
                 [volumeView removeFromSuperview];
