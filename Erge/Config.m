@@ -18,7 +18,18 @@
         if (!config) {
             config = [[Config alloc] init];
             //创建下载目录
-            [[NSFileManager defaultManager] createDirectoryAtPath:downloadFileDir withIntermediateDirectories:YES attributes:nil error:nil];
+            BOOL result = [[NSFileManager defaultManager] createDirectoryAtPath:downloadFileDir withIntermediateDirectories:YES attributes:nil error:nil];
+            if (result) {
+                NSLog(@"创建文件夹成功");
+            }else{
+                NSLog(@"创建文件夹失败");
+            }
+            BOOL res = [[NSFileManager defaultManager] createFileAtPath:downloadPath contents:nil attributes:nil];
+            if (res) {
+                NSLog(@"创建文件成功");
+            }else{
+                NSLog(@"创建文件失败");
+            } 
             [config addSkipBackupAttributeToPath:downloadFileDir];
         }
         return config;

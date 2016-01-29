@@ -21,7 +21,7 @@
 - (NSMutableDictionary *) downloadDic
 {
     _downloadDic = [[NSMutableDictionary alloc] initWithContentsOfFile:downloadPath];
-    if (_downloadDic) {
+    if (!_downloadDic) {
         _downloadDic = [NSMutableDictionary dictionary];
     }
     return _downloadDic;
@@ -66,13 +66,17 @@
     [tempDic setObject:self.targetModel.avatar forKey:@"avatar"];
     [tempDic setObject:self.targetModel.identity forKey:@"id"];
     [tempDic setObject:@0 forKey:@"percent"];
-    [self.downloadDic setObject:tempDic forKey:self.targetModel.identity];
-    
+    [self.downloadDic setObject:tempDic forKey:[self.targetModel.identity stringValue]];
     //下载列表写入文件
-    if (![[NSFileManager defaultManager] isExecutableFileAtPath:downloadPath]) {
-        
+    if (![[NSFileManager defaultManager] isExecutableFileAtPath:mzDirDownloads]) {
+        NSLog(@"  该路径文件不可执行...........");
     }
-    
+    Config *config = [Config sharedConfig];
+    NSLog(@"%@",downloadPath);
+    BOOL result = [_downloadDic writeToFile:downloadPath atomically:YES];
+    if (result) {
+        NSLog(@"写入数据成功");
+    }
 }
 - (void)viewDidDisappear:(BOOL)animated
 {
