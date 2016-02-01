@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 
 @interface MineViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 
 @end
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTabBarItemIcon:@"icon_mine_h"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

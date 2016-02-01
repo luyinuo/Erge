@@ -10,6 +10,7 @@
 		487D59601C5772CA00F3A4FF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D595F1C5772CA00F3A4FF /* MineViewController.m */; };
 		487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59621C577C5600F3A4FF /* BaseViewController.m */; };
 		487D59661C5A16C400F3A4FF /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59651C5A16C400F3A4FF /* Config.m */; };
+		487D596A1C5F33A200F3A4FF /* NSFileManager+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59691C5F33A200F3A4FF /* NSFileManager+Extension.m */; };
 		48D335921C4DD86400FBE6DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335911C4DD86400FBE6DF /* main.m */; };
 		48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335941C4DD86400FBE6DF /* AppDelegate.m */; };
 		48D335981C4DD86500FBE6DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335971C4DD86500FBE6DF /* ViewController.m */; };
@@ -68,6 +69,8 @@
 		487D59621C577C5600F3A4FF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		487D59641C5A16C400F3A4FF /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		487D59651C5A16C400F3A4FF /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		487D59681C5F33A200F3A4FF /* NSFileManager+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Extension.h"; sourceTree = "<group>"; };
+		487D59691C5F33A200F3A4FF /* NSFileManager+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Extension.m"; sourceTree = "<group>"; };
 		48D3358C1C4DD86400FBE6DF /* Erge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D335901C4DD86400FBE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D335911C4DD86400FBE6DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487D59671C5F339100F3A4FF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				487D59681C5F33A200F3A4FF /* NSFileManager+Extension.h */,
+				487D59691C5F33A200F3A4FF /* NSFileManager+Extension.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		48D335831C4DD86400FBE6DF = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,7 @@
 		48D3358E1C4DD86400FBE6DF /* Erge */ = {
 			isa = PBXGroup;
 			children = (
+				487D59671C5F339100F3A4FF /* Category */,
 				48D335BD1C4E3AF200FBE6DF /* 播放器 */,
 				48D335931C4DD86400FBE6DF /* AppDelegate.h */,
 				48D335941C4DD86400FBE6DF /* AppDelegate.m */,
@@ -393,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487D596A1C5F33A200F3A4FF /* NSFileManager+Extension.m in Sources */,
 				48D335FF1C4F797400FBE6DF /* VideoViewController.m in Sources */,
 				487D59661C5A16C400F3A4FF /* Config.m in Sources */,
 				487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */,

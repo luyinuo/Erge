@@ -370,7 +370,7 @@
         //查看缓存文件
         NSString *fileName = [urlString lastPathComponent];
         
-        NSString* filePath = [NSString stringWithFormat:@"%@/%@", mzDirDownloads,fileName];
+        NSString* filePath = [NSString stringWithFormat:@"%@/%@", downloadFileDir,fileName];
         NSLog(@"filePath----%@",filePath);
         if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){ // 已经存在
             
