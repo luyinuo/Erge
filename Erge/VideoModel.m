@@ -17,7 +17,7 @@
         self.name = dic[@"name"];
         self.avatar = dic[@"avatar"];
         self.url = dic[@"url"];
-        self.identity = dic[@"identity"];
+        self.identity = dic[@"identity"]?dic[@"identity"]:dic[@"id"];
     }
     return self;
 }

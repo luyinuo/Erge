@@ -38,10 +38,25 @@
     [backBtn addTarget:self action:@selector(tapBack) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *downloadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    downloadBtn.frame = CGRectMake(90, 20, 50, 44);
+    downloadBtn.frame = CGRectMake(90, 20, 70, 44);
     [downloadBtn setTitle:@"下载" forState:UIControlStateNormal];
+    [downloadBtn setTitle:@"已下载" forState:UIControlStateDisabled];
+    NSMutableDictionary *downloadDic = [NSMutableDictionary dictionaryWithContentsOfFile:downloadPlistPath];
+    NSArray *allKeys = [downloadDic allKeys];
+    for (NSString *key in allKeys) {
+        if ([key isEqualToString:[self.targetModel.identity stringValue]]) {
+            downloadBtn.enabled = NO;
+            break;
+        }
+    }
     [self.view addSubview:downloadBtn];
-    [downloadBtn addTarget:self action:@selector(clickDownload) forControlEvents:UIControlEventTouchUpInside];
+    [downloadBtn addTarget:self action:@selector(clickDownload:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -58,7 +73,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) clickDownload
+- (void) clickDownload:(UIButton*)sender
 {
     NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
     [tempDic setObject:self.targetModel.url forKey:@"url"];
@@ -79,6 +94,7 @@
         NSLog(@"写入数据成功");
     }
     [config startDownloadProcessWithPause:NO];
+    sender.enabled = NO;
 }
 - (void)viewDidDisappear:(BOOL)animated
 {

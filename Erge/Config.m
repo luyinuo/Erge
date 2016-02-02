@@ -11,7 +11,6 @@
 #import <UIKit/UIKit.h>
 #import "NSFileManager+Extension.h"
 @interface Config()<NSURLConnectionDataDelegate>
-@property (nonatomic, strong) NSString *currentProcessId;
 @property (nonatomic, strong) NSURLConnection *myConnection;
 @property (nonatomic, strong) NSString *filePath;
 @property (nonatomic, assign) unsigned long long downloadLength;
@@ -37,12 +36,12 @@
             }else{
                 NSLog(@"创建文件夹失败");
             }
-            BOOL res = [[NSFileManager defaultManager] createFileAtPath:downloadPlistPath contents:nil attributes:nil];
-            if (res) {
-                NSLog(@"创建文件成功");
-            }else{
-                NSLog(@"创建文件失败");
-            } 
+//            BOOL res = [[NSFileManager defaultManager] createFileAtPath:downloadPlistPath contents:nil attributes:nil];
+//            if (res) {
+//                NSLog(@"创建文件成功");
+//            }else{
+//                NSLog(@"创建文件失败");
+//            } 
             [config addSkipBackupAttributeToPath:downloadFileDir];
         }
         return config;
@@ -51,7 +50,18 @@
 
 - (void) startDownloadProcessWithPause:(BOOL)isPause
 {
-    if (self.currentProcessId.length == 0 || !isPause) {
+    if(self.myConnection){
+        if (self.cacheData.length != 0) {
+            //移动到文件尾部
+            [self.fileHanlder seekToEndOfFile];
+            //写入文件
+            [self.fileHanlder writeData:self.cacheData];
+            //清空缓存空间
+            [self.cacheData setLength:0];
+        }
+        [self.myConnection cancel];
+    }
+    if (self.currentProcessId.length == 0) {
         
         NSMutableDictionary *downloadDic  = [NSMutableDictionary dictionaryWithContentsOfFile:downloadPlistPath];
         NSArray *allKeys = [downloadDic allKeys];
@@ -64,8 +74,55 @@
                 [downloadDic writeToFile:downloadPlistPath atomically:YES];
                 self.currentProcessId = key;
                 [self startDownloadWithUrl:item[@"url"]];
+                break;
             }
         }
+    }else{
+        NSMutableDictionary *downloadDic  = [NSMutableDictionary dictionaryWithContentsOfFile:downloadPlistPath];
+        NSMutableDictionary *currentItem = [downloadDic objectForKey:self.currentProcessId];
+        NSNumber *status = isPause?@(DownloadStatusPause):@(DownloadStatusWait);
+        [currentItem setObject:status forKey:@"status"];
+        [downloadDic setObject:currentItem forKey:self.currentProcessId];
+        NSArray *allKeys = [downloadDic allKeys];
+        NSArray *sortKeys = [allKeys sortedArrayUsingFunction:comparator context:NULL];
+       
+        for (NSString *key in sortKeys) {
+            NSMutableDictionary *item = downloadDic[key];
+            if ([item[@"status"] integerValue] == DownloadStatusWait) {
+                [item setObject:@(DownloadStatusIng) forKey:@"status"];
+                [downloadDic setObject:item forKey:key];
+                [downloadDic writeToFile:downloadPlistPath atomically:YES];
+                self.currentProcessId = key;
+                [self startDownloadWithUrl:item[@"url"]];
+                break;
+            }
+        }
+
+    }
+}
+- (void) startDownloadWithProccessId:(NSString *)processId
+{
+    if (self.currentProcessId != processId) {
+        if (self.cacheData.length != 0) {
+            //移动到文件尾部
+            [self.fileHanlder seekToEndOfFile];
+            //写入文件
+            [self.fileHanlder writeData:self.cacheData];
+            //清空缓存空间
+            [self.cacheData setLength:0];
+        }
+        NSMutableDictionary *downloadDic  = [NSMutableDictionary dictionaryWithContentsOfFile:downloadPlistPath];
+        if(self.currentProcessId.length > 0){
+            NSMutableDictionary *currentItem = [downloadDic objectForKey:self.currentProcessId];
+            [currentItem setObject:@(DownloadStatusPause) forKey:@"status"];
+            [downloadDic setObject:currentItem forKey:self.currentProcessId];
+        }
+        NSMutableDictionary *targetItem = [downloadDic objectForKey:processId];
+        [targetItem setObject:@(DownloadStatusIng) forKey:@"status"];
+        [downloadDic setObject:targetItem forKey:processId];
+        [downloadDic writeToFile:downloadPlistPath atomically:YES];
+        self.currentProcessId = processId;
+        [self startDownloadWithUrl:targetItem[@"url"]];
     }
 }
 /**
@@ -176,6 +233,8 @@ NSInteger comparator(id obj1, id obj2, void *context){
     if ([self.delegate respondsToSelector:@selector(downloadFileManagerDidFinished)]) {
         [self.delegate downloadFileManagerDidFinished];
     }
+    self.currentProcessId = @"";
+    [self startDownloadProcessWithPause:NO];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -233,5 +292,12 @@ NSInteger comparator(id obj1, id obj2, void *context){
 - (void)addSkipBackupAttributeToPath:(NSString*)path {
     u_int8_t b = 1;
     setxattr([path fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
+}
+- (void) dealloc
+{
+    NSLog(@"config ... delloc...");
+    if (self.myConnection) {
+        [self.myConnection cancel];
+    }
 }
 @end

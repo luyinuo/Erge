@@ -397,7 +397,8 @@
             }else{
                 [self setContentURL:[NSURL URLWithString:urlString]];NSLog(@"%@",urlString);
             }*/
-             [self setContentURL:[NSURL URLWithString:urlString]];NSLog(@"%@",urlString);
+             [self setContentURL:[NSURL URLWithString:urlString]];
+            NSLog(@"%@",urlString);
         }
         [self play];
     }else{

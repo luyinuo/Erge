@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Config.h"
 
 @interface AppDelegate ()
 
@@ -40,7 +41,16 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSLog(@"terminate");
+    NSMutableDictionary *downloadDic = [NSMutableDictionary dictionaryWithContentsOfFile:downloadPlistPath];
+    if ([Config sharedConfig].currentProcessId.length > 0) {
+        NSMutableDictionary *item = downloadDic[[Config sharedConfig].currentProcessId];
+        if ([item[@"status"] intValue] == DownloadStatusIng) {
+            [item setObject:@(DownloadStatusPause) forKey:@"status"];
+            [downloadDic setObject:item forKey:[Config sharedConfig].currentProcessId];
+            [downloadDic writeToFile:downloadPlistPath atomically:YES];
+        }
+    }
 }
 
 @end
