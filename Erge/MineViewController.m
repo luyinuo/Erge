@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTabBarItemIcon:@"icon_mine_h"];
+    self.title = @"个人中心";
     
 }
 - (void) viewWillAppear:(BOOL)animated
@@ -46,6 +47,5 @@
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:address]];
 }
-
 
 @end

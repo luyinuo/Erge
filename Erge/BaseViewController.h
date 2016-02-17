@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSString+Remind.h"
 
 @interface BaseViewController : UIViewController
 

@@ -36,12 +36,6 @@
             }else{
                 NSLog(@"创建文件夹失败");
             }
-//            BOOL res = [[NSFileManager defaultManager] createFileAtPath:downloadPlistPath contents:nil attributes:nil];
-//            if (res) {
-//                NSLog(@"创建文件成功");
-//            }else{
-//                NSLog(@"创建文件失败");
-//            } 
             [config addSkipBackupAttributeToPath:downloadFileDir];
         }
         return config;
@@ -125,6 +119,7 @@
         [self startDownloadWithUrl:targetItem[@"url"]];
     }
 }
+
 /**
  *  排序
  *

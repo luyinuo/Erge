@@ -35,27 +35,35 @@
                             <action selector="pauseOrStart:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pnR-af-YCq"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="80%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42c-Rn-edf">
-                        <rect key="frame" x="270" y="58" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42c-Rn-edf">
+                        <rect key="frame" x="162" y="73" width="37" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-mh-BAJ">
-                        <rect key="frame" x="162" y="58" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-mh-BAJ">
+                        <rect key="frame" x="162" y="38" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="42c-Rn-edf" secondAttribute="centerY" id="25Y-jK-yXZ"/>
+                    <constraint firstAttribute="centerY" secondItem="42c-Rn-edf" secondAttribute="centerY" constant="50" id="25Y-jK-yXZ"/>
                     <constraint firstAttribute="centerY" secondItem="qJA-Zq-7ES" secondAttribute="centerY" id="8tj-Op-uoL"/>
                     <constraint firstItem="n0D-mh-BAJ" firstAttribute="leading" secondItem="qJA-Zq-7ES" secondAttribute="trailing" constant="22" id="O3J-Iq-qyl"/>
-                    <constraint firstAttribute="centerY" secondItem="n0D-mh-BAJ" secondAttribute="centerY" id="OIm-yR-Tb5"/>
+                    <constraint firstAttribute="centerY" secondItem="n0D-mh-BAJ" secondAttribute="centerY" constant="12" id="OIm-yR-Tb5"/>
                     <constraint firstItem="qJA-Zq-7ES" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="TAN-NZ-giy"/>
+                    <constraint firstItem="42c-Rn-edf" firstAttribute="leading" secondItem="qJA-Zq-7ES" secondAttribute="trailing" constant="22" id="ZWh-Fn-tXx"/>
+                    <constraint firstItem="42c-Rn-edf" firstAttribute="top" secondItem="n0D-mh-BAJ" secondAttribute="bottom" constant="14" id="kos-ud-Gew"/>
                     <constraint firstAttribute="trailing" secondItem="42c-Rn-edf" secondAttribute="trailing" constant="8" id="vBb-Yc-ut5"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="25Y-jK-yXZ"/>
+                        <exclude reference="vBb-Yc-ut5"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarBtn" destination="qJA-Zq-7ES" id="lOG-zc-o13"/>

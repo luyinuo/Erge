@@ -11,15 +11,14 @@
 #import "VideoModel.h"
 #import "VideoViewController.h"
 
-#define ScreenWidth [UIScreen mainScreen].bounds.size.width
-#define ScrollHeight self.mainScrollView.frame.size.height
-
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (weak, nonatomic) IBOutlet UITableView *oneTableView;
 @property (weak, nonatomic) IBOutlet UITableView *twoTableView;
 @property (weak, nonatomic) IBOutlet UITableView *threeTable;
 @property (nonatomic, strong) NSMutableArray *ergeArray;
+@property (nonatomic, strong) NSMutableArray *tongyaoArray;
+@property (nonatomic, strong) NSMutableArray *customArray;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *segmentButtons;
 
 @end
@@ -50,29 +49,44 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"source" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *array = dic[@"erge"];
+    NSArray *erge = dic[@"erge"];
+    NSArray *tongyao = dic[@"tongyao"];
+    NSArray *custom = dic[@"custom"];
+    self.ergeArray = [NSMutableArray array];
+    self.tongyaoArray = [NSMutableArray array];
+    self.customArray = [NSMutableArray array];
+    //数据格式化
+    [self revertArray:erge toArray:self.ergeArray];
+    [self revertArray:tongyao toArray:self.tongyaoArray];
+    [self revertArray:custom toArray:self.customArray];
+    
+    [self.oneTableView reloadData];
+    [self.twoTableView reloadData];
+    [self.threeTable reloadData];
+    
+}
+- (void) revertArray:(NSArray*) fromArray toArray:(NSMutableArray*)toArray
+{
     NSMutableArray *revertArray = [NSMutableArray array];
-    for (NSDictionary *dic in array) {
+    for (NSDictionary *dic in fromArray) {
         VideoModel *model = [VideoModel modelWithDic:dic];
         [revertArray addObject:model];
     }
-    self.ergeArray = [NSMutableArray array];
+    
     NSMutableArray *tempArray;
     for (NSInteger i = 0; i < revertArray.count; i++) {
         if (i%2 == 0) {
             tempArray = [NSMutableArray array];
             [tempArray addObject:revertArray[i]];
-            if (i == array.count-1) {
-                [self.ergeArray addObject:tempArray];
+            if (i == fromArray.count-1) {
+                [toArray addObject:tempArray];
             }
         }else if (i%2 == 1){
             [tempArray addObject:revertArray[i]];
-            [self.ergeArray addObject:tempArray];
+            [toArray addObject:tempArray];
         }
-        
     }
-    [self.oneTableView reloadData];
-    NSLog(@"%@",self.ergeArray);
+
 }
 
 - (IBAction)onClickSegmentButton:(UIButton *)sender {
@@ -100,7 +114,14 @@
 #pragma mark - tableview datasource and delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
-    return self.ergeArray.count;
+    if (tableView == self.oneTableView) {
+        return self.ergeArray.count;
+    }else if(tableView == self.twoTableView){
+        return self.tongyaoArray.count;
+    }else{
+        return self.customArray.count;
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -109,7 +130,16 @@
     if (!cell) {
         cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ergeCell"];
     }
-    cell.models = self.ergeArray[indexPath.row];
+    
+    NSArray *source = @[];
+    if (tableView == self.oneTableView) {
+        source = self.ergeArray[indexPath.row];
+    }else if (tableView == self.twoTableView){
+        source = self.tongyaoArray[indexPath.row];
+    }else{
+        source = self.customArray[indexPath.row];
+    }
+    cell.models = source;
     cell.clickPlayerOperation = ^(VideoModel *model){
         VideoViewController *controler = [[VideoViewController alloc] init];
         controler.targetModel = model;

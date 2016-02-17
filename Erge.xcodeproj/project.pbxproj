@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		487763851C72E86B00F113F2 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487763841C72E86B00F113F2 /* FeedbackViewController.m */; };
+		487763881C72EF6000F113F2 /* NSString+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = 487763871C72EF6000F113F2 /* NSString+Remind.m */; };
+		4877638A1C72F0CB00F113F2 /* Remind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487763891C72F0CB00F113F2 /* Remind.xib */; };
+		4877638C1C72F9A700F113F2 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877638B1C72F9A700F113F2 /* BmobSDK.framework */; };
+		4877638E1C72FA1800F113F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877638D1C72FA1800F113F2 /* CoreLocation.framework */; };
+		487763901C72FA2B00F113F2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877638F1C72FA2B00F113F2 /* Security.framework */; };
+		487763921C72FA3A00F113F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763911C72FA3A00F113F2 /* CoreGraphics.framework */; };
+		487763941C72FA4800F113F2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763931C72FA4800F113F2 /* MobileCoreServices.framework */; };
+		487763961C72FA5500F113F2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763951C72FA5500F113F2 /* CFNetwork.framework */; };
+		487763981C72FA5F00F113F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763971C72FA5F00F113F2 /* CoreTelephony.framework */; };
+		4877639A1C72FA6900F113F2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763991C72FA6900F113F2 /* SystemConfiguration.framework */; };
+		4877639C1C72FA7500F113F2 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877639B1C72FA7500F113F2 /* libz.1.2.5.dylib */; };
+		4877639E1C72FA8000F113F2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877639D1C72FA8000F113F2 /* libicucore.dylib */; };
+		487763A01C72FA8C00F113F2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877639F1C72FA8C00F113F2 /* libsqlite3.dylib */; };
+		487763A21C72FA9600F113F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763A11C72FA9600F113F2 /* AVFoundation.framework */; };
+		487763A41C72FAA200F113F2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487763A31C72FAA200F113F2 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		487763A81C73004F00F113F2 /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 487763A71C73004F00F113F2 /* DeviceInfo.m */; };
+		487763AE1C7323D600F113F2 /* player_pauseS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 487763AA1C7323D600F113F2 /* player_pauseS@2x.png */; };
+		487763AF1C7323D600F113F2 /* player_pauseS@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 487763AB1C7323D600F113F2 /* player_pauseS@3x.png */; };
+		487763B01C7323D600F113F2 /* player_playS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 487763AC1C7323D600F113F2 /* player_playS@2x.png */; };
+		487763B11C7323D600F113F2 /* player_playS@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 487763AD1C7323D600F113F2 /* player_playS@3x.png */; };
 		487D59601C5772CA00F3A4FF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D595F1C5772CA00F3A4FF /* MineViewController.m */; };
 		487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59621C577C5600F3A4FF /* BaseViewController.m */; };
 		487D59661C5A16C400F3A4FF /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D59651C5A16C400F3A4FF /* Config.m */; };
@@ -66,6 +87,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		487763831C72E86B00F113F2 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		487763841C72E86B00F113F2 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		487763861C72EF6000F113F2 /* NSString+Remind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Remind.h"; sourceTree = "<group>"; };
+		487763871C72EF6000F113F2 /* NSString+Remind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Remind.m"; sourceTree = "<group>"; };
+		487763891C72F0CB00F113F2 /* Remind.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Remind.xib; sourceTree = "<group>"; };
+		4877638B1C72F9A700F113F2 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		4877638D1C72FA1800F113F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4877638F1C72FA2B00F113F2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		487763911C72FA3A00F113F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		487763931C72FA4800F113F2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		487763951C72FA5500F113F2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		487763971C72FA5F00F113F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		487763991C72FA6900F113F2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4877639B1C72FA7500F113F2 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		4877639D1C72FA8000F113F2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4877639F1C72FA8C00F113F2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		487763A11C72FA9600F113F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		487763A31C72FAA200F113F2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		487763A61C73004F00F113F2 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		487763A71C73004F00F113F2 /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		487763AA1C7323D600F113F2 /* player_pauseS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pauseS@2x.png"; sourceTree = "<group>"; };
+		487763AB1C7323D600F113F2 /* player_pauseS@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pauseS@3x.png"; sourceTree = "<group>"; };
+		487763AC1C7323D600F113F2 /* player_playS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_playS@2x.png"; sourceTree = "<group>"; };
+		487763AD1C7323D600F113F2 /* player_playS@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_playS@3x.png"; sourceTree = "<group>"; };
 		487D595E1C5772CA00F3A4FF /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		487D595F1C5772CA00F3A4FF /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		487D59611C577C5600F3A4FF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -138,6 +183,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487763A41C72FAA200F113F2 /* MediaPlayer.framework in Frameworks */,
+				487763A21C72FA9600F113F2 /* AVFoundation.framework in Frameworks */,
+				487763A01C72FA8C00F113F2 /* libsqlite3.dylib in Frameworks */,
+				4877639E1C72FA8000F113F2 /* libicucore.dylib in Frameworks */,
+				4877639C1C72FA7500F113F2 /* libz.1.2.5.dylib in Frameworks */,
+				4877639A1C72FA6900F113F2 /* SystemConfiguration.framework in Frameworks */,
+				487763981C72FA5F00F113F2 /* CoreTelephony.framework in Frameworks */,
+				487763961C72FA5500F113F2 /* CFNetwork.framework in Frameworks */,
+				487763941C72FA4800F113F2 /* MobileCoreServices.framework in Frameworks */,
+				487763921C72FA3A00F113F2 /* CoreGraphics.framework in Frameworks */,
+				487763901C72FA2B00F113F2 /* Security.framework in Frameworks */,
+				4877638E1C72FA1800F113F2 /* CoreLocation.framework in Frameworks */,
+				4877638C1C72F9A700F113F2 /* BmobSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +209,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487763A51C73004700F113F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				487763A61C73004F00F113F2 /* DeviceInfo.h */,
+				487763A71C73004F00F113F2 /* DeviceInfo.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		487763A91C7314CA00F113F2 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
 		487D59671C5F339100F3A4FF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				487763861C72EF6000F113F2 /* NSString+Remind.h */,
+				487763871C72EF6000F113F2 /* NSString+Remind.m */,
 				487D59681C5F33A200F3A4FF /* NSFileManager+Extension.h */,
 				487D59691C5F33A200F3A4FF /* NSFileManager+Extension.m */,
 			);
@@ -181,12 +257,15 @@
 		48D3358E1C4DD86400FBE6DF /* Erge */ = {
 			isa = PBXGroup;
 			children = (
+				487763A91C7314CA00F113F2 /* Ads */,
+				487763A51C73004700F113F2 /* Utils */,
 				487D59671C5F339100F3A4FF /* Category */,
 				48D335BD1C4E3AF200FBE6DF /* 播放器 */,
 				48D335931C4DD86400FBE6DF /* AppDelegate.h */,
 				48D335941C4DD86400FBE6DF /* AppDelegate.m */,
 				487D59641C5A16C400F3A4FF /* Config.h */,
 				487D59651C5A16C400F3A4FF /* Config.m */,
+				487763891C72F0CB00F113F2 /* Remind.xib */,
 				487D59611C577C5600F3A4FF /* BaseViewController.h */,
 				487D59621C577C5600F3A4FF /* BaseViewController.m */,
 				48D335961C4DD86500FBE6DF /* ViewController.h */,
@@ -197,6 +276,8 @@
 				48D335FE1C4F797400FBE6DF /* VideoViewController.m */,
 				487D596B1C60491000F3A4FF /* MyDownloadTableViewController.h */,
 				487D596C1C60491000F3A4FF /* MyDownloadTableViewController.m */,
+				487763831C72E86B00F113F2 /* FeedbackViewController.h */,
+				487763841C72E86B00F113F2 /* FeedbackViewController.m */,
 				487D596E1C6057BC00F3A4FF /* DownloadTableViewCell.h */,
 				487D596F1C6057BC00F3A4FF /* DownloadTableViewCell.m */,
 				487D59701C6057BC00F3A4FF /* DownloadTableViewCell.xib */,
@@ -244,6 +325,10 @@
 		48D335BD1C4E3AF200FBE6DF /* 播放器 */ = {
 			isa = PBXGroup;
 			children = (
+				487763AA1C7323D600F113F2 /* player_pauseS@2x.png */,
+				487763AB1C7323D600F113F2 /* player_pauseS@3x.png */,
+				487763AC1C7323D600F113F2 /* player_playS@2x.png */,
+				487763AD1C7323D600F113F2 /* player_playS@3x.png */,
 				48D335CB1C4E3C2400FBE6DF /* courseInfo_yd_goBack@2x.png */,
 				48D335CD1C4E3C6100FBE6DF /* courseInfo_volume.png */,
 				48D335CF1C4E3CA100FBE6DF /* courseInfo_secListIconNor@2x.png */,
@@ -280,6 +365,19 @@
 		48D335F51C4F347600FBE6DF /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				487763A31C72FAA200F113F2 /* MediaPlayer.framework */,
+				487763A11C72FA9600F113F2 /* AVFoundation.framework */,
+				4877639F1C72FA8C00F113F2 /* libsqlite3.dylib */,
+				4877639D1C72FA8000F113F2 /* libicucore.dylib */,
+				4877639B1C72FA7500F113F2 /* libz.1.2.5.dylib */,
+				487763991C72FA6900F113F2 /* SystemConfiguration.framework */,
+				487763971C72FA5F00F113F2 /* CoreTelephony.framework */,
+				487763951C72FA5500F113F2 /* CFNetwork.framework */,
+				487763931C72FA4800F113F2 /* MobileCoreServices.framework */,
+				487763911C72FA3A00F113F2 /* CoreGraphics.framework */,
+				4877638F1C72FA2B00F113F2 /* Security.framework */,
+				4877638D1C72FA1800F113F2 /* CoreLocation.framework */,
+				4877638B1C72F9A700F113F2 /* BmobSDK.framework */,
 				48D335F61C4F348F00FBE6DF /* Reachability */,
 			);
 			path = Framework;
@@ -374,13 +472,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4877638A1C72F0CB00F113F2 /* Remind.xib in Resources */,
 				48D335DC1C4E3E9500FBE6DF /* courseInfo_backS@3x.png in Resources */,
 				48D335E01C4E3F1A00FBE6DF /* courseInfo_yd_volume@2x.png in Resources */,
 				48D335F01C4E40F300FBE6DF /* player_pause@3x.png in Resources */,
+				487763B11C7323D600F113F2 /* player_playS@3x.png in Resources */,
 				48D335D61C4E3D3A00FBE6DF /* courseInfo_quickBack.png in Resources */,
 				48D335E31C4E3F5500FBE6DF /* player_exitScreen@2x.png in Resources */,
 				48D335F31C4E418D00FBE6DF /* player_screen@2x.png in Resources */,
 				48D3359B1C4DD86500FBE6DF /* Main.storyboard in Resources */,
+				487763B01C7323D600F113F2 /* player_playS@2x.png in Resources */,
 				48D335F41C4E418D00FBE6DF /* player_screen@3x.png in Resources */,
 				48D335DB1C4E3E9500FBE6DF /* courseInfo_backS@2x.png in Resources */,
 				48D335CE1C4E3C6100FBE6DF /* courseInfo_volume.png in Resources */,
@@ -388,6 +489,7 @@
 				48D335D41C4E3CC600FBE6DF /* courseInfo_quickGo.png in Resources */,
 				48D335BC1C4E2D0700FBE6DF /* TableViewCell.xib in Resources */,
 				48D335A01C4DD86500FBE6DF /* LaunchScreen.xib in Resources */,
+				487763AF1C7323D600F113F2 /* player_pauseS@3x.png in Resources */,
 				48D335D11C4E3CA100FBE6DF /* courseInfo_secListIconNor@2x.png in Resources */,
 				48D335CC1C4E3C2400FBE6DF /* courseInfo_yd_goBack@2x.png in Resources */,
 				48D335D21C4E3CA100FBE6DF /* courseInfo_secListIconNor@3x.png in Resources */,
@@ -400,6 +502,7 @@
 				48D3359D1C4DD86500FBE6DF /* Images.xcassets in Resources */,
 				48D335E81C4E401900FBE6DF /* player_progressBt@3x.png in Resources */,
 				487D59721C6057BD00F3A4FF /* DownloadTableViewCell.xib in Resources */,
+				487763AE1C7323D600F113F2 /* player_pauseS@2x.png in Resources */,
 				48D335B71C4E150E00FBE6DF /* source.plist in Resources */,
 				48D335D81C4E3D5E00FBE6DF /* courseInfo_light.png in Resources */,
 				48D335EB1C4E409F00FBE6DF /* player_play@2x.png in Resources */,
@@ -422,6 +525,7 @@
 			files = (
 				487D596A1C5F33A200F3A4FF /* NSFileManager+Extension.m in Sources */,
 				48D335FF1C4F797400FBE6DF /* VideoViewController.m in Sources */,
+				487763881C72EF6000F113F2 /* NSString+Remind.m in Sources */,
 				487D59661C5A16C400F3A4FF /* Config.m in Sources */,
 				487D59631C577C5600F3A4FF /* BaseViewController.m in Sources */,
 				48D335981C4DD86500FBE6DF /* ViewController.m in Sources */,
@@ -432,10 +536,12 @@
 				48D335921C4DD86400FBE6DF /* main.m in Sources */,
 				48D335FC1C4F389300FBE6DF /* VideoModel.m in Sources */,
 				48D335C91C4E3B0000FBE6DF /* WKPlayerVolume.m in Sources */,
+				487763A81C73004F00F113F2 /* DeviceInfo.m in Sources */,
 				48D335CA1C4E3B0000FBE6DF /* WKMPMoviePlayerController.m in Sources */,
 				487D59711C6057BD00F3A4FF /* DownloadTableViewCell.m in Sources */,
 				487D596D1C60491000F3A4FF /* MyDownloadTableViewController.m in Sources */,
 				48D335C81C4E3B0000FBE6DF /* WKPlayerVideoList.m in Sources */,
+				487763851C72E86B00F113F2 /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,12 +670,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhang Linghua (98HB883VUV)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Erge/Framework",
+				);
 				INFOPLIST_FILE = Erge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bc5be485-4a1c-45f6-a66d-59856e2cf883";
+				PROVISIONING_PROFILE = "3d8ff385-6acd-4838-8418-e3587232e24d";
 			};
 			name = Debug;
 		};
@@ -578,11 +688,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Erge/Framework",
+				);
 				INFOPLIST_FILE = Erge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bc5be485-4a1c-45f6-a66d-59856e2cf883";
+				PROVISIONING_PROFILE = "3d8ff385-6acd-4838-8418-e3587232e24d";
 			};
 			name = Release;
 		};
