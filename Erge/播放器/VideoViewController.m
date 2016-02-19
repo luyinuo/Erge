@@ -8,6 +8,7 @@
 
 #import "VideoViewController.h"
 #import "WKMPMoviePlayerController.h"
+#import "NSString+Remind.h"
 
 @interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate>
 @property (nonatomic, strong) NSMutableDictionary *downloadDic;
@@ -29,7 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadMoviePlayer];
+    [self loadMoviePlayer];//[UIColor colorWithRed:131/255.0 green:190/255.0 blue:240/255.0 alpha:1]
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    
     //返回按钮
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(20, 20, 50, 44);
@@ -95,6 +98,7 @@
     }
     [config startDownloadProcessWithPause:NO];
     sender.enabled = NO;
+    [@"下载成功,请到个人中心我的下载查看" showRemind:nil];
 }
 - (void)viewDidDisappear:(BOOL)animated
 {

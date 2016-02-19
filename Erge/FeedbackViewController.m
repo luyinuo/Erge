@@ -23,6 +23,7 @@
     self.contentView.layer.cornerRadius = 5;
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(commitFeedback)];
     self.navigationItem.rightBarButtonItem = doneBtn;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
 }
 
 

@@ -18,7 +18,7 @@
 			<key>name</key>
 			<string>爸爸去哪儿</string>
 			<key>avatar</key>
-			<string>bbqne</string>
+			<string>bbqn</string>
 			<key>url</key>
 			<string>http://res2.lefun.net.cn/nnm/res/nnm26.mp4</string>
 			<key>identity</key>
@@ -28,7 +28,7 @@
 			<key>name</key>
 			<string>少女与战车</string>
 			<key>avatar</key>
-			<string>snyzc</string>
+			<string>kqs</string>
 			<key>url</key>
 			<string>http://res2.lefun.net.cn/nnm/res/nnm27.mp4</string>
 			<key>identity</key>
@@ -108,7 +108,7 @@
 			<key>name</key>
 			<string>乡间小路</string>
 			<key>avatar</key>
-			<string>xjxl</string>
+			<string>xjdxl</string>
 			<key>url</key>
 			<string>http://res2.lefun.net.cn/nnm/res/nnm35.mp4</string>
 			<key>identity</key>
@@ -283,6 +283,46 @@
 			<string>http://res2.lefun.net.cn/nnm/res/nnm52.mp4</string>
 			<key>identity</key>
 			<integer>52</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>蜗牛与黄鹂鸟</string>
+			<key>avatar</key>
+			<string>wnyhln</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm53.mp4</string>
+			<key>identity</key>
+			<integer>53</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>大雁飞</string>
+			<key>avatar</key>
+			<string>dyf</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm54.mp4</string>
+			<key>identity</key>
+			<integer>54</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>猪都笑了</string>
+			<key>avatar</key>
+			<string>zdxl</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm55.mp4</string>
+			<key>identity</key>
+			<integer>55</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>十二生肖歌</string>
+			<key>avatar</key>
+			<string>sesx</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm56.mp4</string>
+			<key>identity</key>
+			<integer>56</integer>
 		</dict>
 	</array>
 	<key>tongyao</key>
@@ -526,6 +566,129 @@
 			<string>http://res2.lefun.net.cn/nnm/res/nnm24.mp4</string>
 			<key>identity</key>
 			<integer>24</integer>
+		</dict>
+	</array>
+	<key>custom</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>洗手歌</string>
+			<key>avatar</key>
+			<string>xsg</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm57.mp4</string>
+			<key>identity</key>
+			<integer>57</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>排排坐</string>
+			<key>avatar</key>
+			<string>ppzcgg</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm58.mp4</string>
+			<key>identity</key>
+			<integer>58</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>上学歌</string>
+			<key>avatar</key>
+			<string>sxg</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm59.mp4</string>
+			<key>identity</key>
+			<integer>59</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>读书郎</string>
+			<key>avatar</key>
+			<string>dsl</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm60.mp4</string>
+			<key>identity</key>
+			<integer>60</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>恭喜恭喜</string>
+			<key>avatar</key>
+			<string>gxgx</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm61.mp4</string>
+			<key>identity</key>
+			<integer>61</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>过新年</string>
+			<key>avatar</key>
+			<string>gxn</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm62.mp4</string>
+			<key>identity</key>
+			<integer>62</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>新年好</string>
+			<key>avatar</key>
+			<string>xnh</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm63.mp4</string>
+			<key>identity</key>
+			<integer>63</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>中秋节</string>
+			<key>avatar</key>
+			<string>zqj</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm64.mp4</string>
+			<key>identity</key>
+			<integer>64</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>小手拍拍</string>
+			<key>avatar</key>
+			<string>xspp</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm65.mp4</string>
+			<key>identity</key>
+			<integer>65</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>一年级小学生</string>
+			<key>avatar</key>
+			<string>ynjxxs</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm66.mp4</string>
+			<key>identity</key>
+			<integer>66</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>勤劳买菜歌</string>
+			<key>avatar</key>
+			<string>mcg</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm67.mp4</string>
+			<key>identity</key>
+			<integer>67</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>一分钱</string>
+			<key>avatar</key>
+			<string>yfq</string>
+			<key>url</key>
+			<string>http://res2.lefun.net.cn/nnm/res/nnm68.mp4</string>
+			<key>identity</key>
+			<integer>68</integer>
 		</dict>
 	</array>
 </dict>
