@@ -53,6 +53,8 @@
         }
     }
     [self.view addSubview:downloadBtn];
+    //1.0版本被拒临时处理方案
+    downloadBtn.hidden = YES;
     [downloadBtn addTarget:self action:@selector(clickDownload:) forControlEvents:UIControlEventTouchUpInside];
 }
 

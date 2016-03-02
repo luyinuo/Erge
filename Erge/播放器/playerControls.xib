@@ -167,7 +167,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="214" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qIm-Pq-NJZ">
+                        <button hidden="YES" opaque="NO" tag="214" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qIm-Pq-NJZ">
                             <rect key="frame" x="524" y="0.0" width="44" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                             <state key="normal" backgroundImage="courseInfo_secListIconNor">

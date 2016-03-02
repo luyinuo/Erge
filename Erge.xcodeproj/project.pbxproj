@@ -35,7 +35,6 @@
 		487D596D1C60491000F3A4FF /* MyDownloadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D596C1C60491000F3A4FF /* MyDownloadTableViewController.m */; };
 		487D59711C6057BD00F3A4FF /* DownloadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 487D596F1C6057BC00F3A4FF /* DownloadTableViewCell.m */; };
 		487D59721C6057BD00F3A4FF /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487D59701C6057BC00F3A4FF /* DownloadTableViewCell.xib */; };
-		4890E6E41C772B0A003130A2 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4890E6E31C772B0A003130A2 /* Images-2.xcassets */; };
 		48D335921C4DD86400FBE6DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335911C4DD86400FBE6DF /* main.m */; };
 		48D335951C4DD86400FBE6DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335941C4DD86400FBE6DF /* AppDelegate.m */; };
 		48D335981C4DD86500FBE6DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D335971C4DD86500FBE6DF /* ViewController.m */; };
@@ -123,7 +122,6 @@
 		487D596E1C6057BC00F3A4FF /* DownloadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewCell.h; sourceTree = "<group>"; };
 		487D596F1C6057BC00F3A4FF /* DownloadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewCell.m; sourceTree = "<group>"; };
 		487D59701C6057BC00F3A4FF /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
-		4890E6E31C772B0A003130A2 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		48D3358C1C4DD86400FBE6DF /* Erge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D335901C4DD86400FBE6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D335911C4DD86400FBE6DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 				48D335B61C4E150E00FBE6DF /* source.plist */,
 				48D335FA1C4F389300FBE6DF /* VideoModel.h */,
 				48D335FB1C4F389300FBE6DF /* VideoModel.m */,
-				4890E6E31C772B0A003130A2 /* Images-2.xcassets */,
 			);
 			path = Erge;
 			sourceTree = "<group>";
@@ -438,6 +435,7 @@
 				TargetAttributes = {
 					48D3358B1C4DD86400FBE6DF = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 5EA84RSZ3J;
 					};
 					48D335A41C4DD86500FBE6DF = {
 						CreatedOnToolsVersion = 6.4;
@@ -490,7 +488,6 @@
 				48D335CC1C4E3C2400FBE6DF /* courseInfo_yd_goBack@2x.png in Resources */,
 				48D335E71C4E401900FBE6DF /* player_progressBt@2x.png in Resources */,
 				48D335E41C4E3F5500FBE6DF /* player_exitScreen@3x.png in Resources */,
-				4890E6E41C772B0A003130A2 /* Images-2.xcassets in Resources */,
 				48D335EC1C4E409F00FBE6DF /* player_play@3x.png in Resources */,
 				48D335C71C4E3B0000FBE6DF /* playerControls.xib in Resources */,
 				48D335EF1C4E40F300FBE6DF /* player_pause@2x.png in Resources */,
@@ -676,7 +673,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3d8ff385-6acd-4838-8418-e3587232e24d";
+				PROVISIONING_PROFILE = "4bde2126-b12a-4f3d-8f89-fd17b3869824";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -685,7 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: yinuo lu (5EA84RSZ3J)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Erge/Framework",
@@ -694,7 +692,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3d8ff385-6acd-4838-8418-e3587232e24d";
+				PROVISIONING_PROFILE = "4bde2126-b12a-4f3d-8f89-fd17b3869824";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

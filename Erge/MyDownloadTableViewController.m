@@ -37,6 +37,10 @@
     self.navigationController.navigationBar.hidden = NO;
     [Config sharedConfig].delegate = self;
 }
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 - (void) viewWillDisappear:(BOOL)animated
 {

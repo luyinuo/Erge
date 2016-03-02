@@ -13,7 +13,7 @@
 //系统是否为7.0以上
 #define Ios7Later ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
 //保存应用在商店中的的apple id
-#define AppleId @"914713849"
+#define AppleId @"1080868675"
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScrollHeight self.mainScrollView.frame.size.height
 typedef NS_ENUM(NSUInteger, DownloadStatus){
