@@ -9,6 +9,7 @@
 #import "VideoViewController.h"
 #import "WKMPMoviePlayerController.h"
 #import "NSString+Remind.h"
+#import "Constaint.h"
 
 @interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate>
 @property (nonatomic, strong) NSMutableDictionary *downloadDic;
@@ -54,7 +55,7 @@
     }
     [self.view addSubview:downloadBtn];
     //1.0版本被拒临时处理方案
-    downloadBtn.hidden = YES;
+    downloadBtn.hidden = isHideDownload;
     [downloadBtn addTarget:self action:@selector(clickDownload:) forControlEvents:UIControlEventTouchUpInside];
 }
 

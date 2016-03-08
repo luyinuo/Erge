@@ -19,6 +19,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Bmob registerWithAppKey:@"fc16b8978032b7ababb8721e77b785b1"];
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"AppInfo"];
+    [bquery getObjectInBackgroundWithId:@"pyY6aaak" block:^(BmobObject *object,NSError *error){
+        if (error){
+            //进行错误处理
+        }else{
+            //表里有id为0c6db13c的数据
+            if (object) {
+                //得到playerName和cheatMode
+                self.versionNo = [object objectForKey:@"versionNo"];
+                self.isOnChecking = [[object objectForKey:@"isCheck"] boolValue];
+                NSLog(@"version = %@  and ischecking = %@",self.versionNo,@(self.isOnChecking));
+            }
+        }
+    }];
     return YES;
 }
 
