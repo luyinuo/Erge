@@ -9,7 +9,8 @@
 #import "MineViewController.h"
 #import "Config.h"
 #import "Constaint.h"
-@interface MineViewController ()
+#import <StoreKit/StoreKit.h>
+@interface MineViewController ()<SKProductsRequestDelegate,SKPaymentTransactionObserver>
 @property (weak, nonatomic) IBOutlet UIView *downloadView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
@@ -25,8 +26,10 @@
     [self setTabBarItemIcon:@"icon_mine_h"];
     self.title = @"个人中心";
     self.downloadView.hidden = isHideDownload;
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     
 }
+
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -64,6 +67,77 @@
         return NO;
     }
     return YES;
+}
+
+- (IBAction)deleteAD:(UIButton *)sender {
+    if ([SKPaymentQueue canMakePayments]) {
+        [self getProductInfo];
+    }else{
+        NSLog(@"失败，用户禁止应用内付费");
+    }
+    
+}
+/**
+ *  获取商品信息
+ */
+- (void) getProductInfo
+{
+    NSSet *set = [NSSet setWithArray:@[kIdentifyForADIAP]];
+    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:set];
+    request.delegate = self;
+    [request start];
+}
+
+#pragma mark SKProductDelegate method
+- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
+{
+    NSArray *products = response.products;
+    if (products.count == 0) {
+        NSLog(@"无法获取到商品信息");
+        return;
+    }
+    SKPayment *payment = [SKPayment paymentWithProduct:products[0]];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
+}
+#pragma mark - SKPaymentQueueObserv
+
+- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray<SKPaymentTransaction *> *)transactions
+{
+    for (SKPaymentTransaction *transition in transactions) {
+        switch (transition.transactionState) {
+            case SKPaymentTransactionStatePurchased://交易完成
+                
+                NSLog(@"交易完成 --%@",transition);
+                [self transitionCompleted];
+                break;
+                
+            case SKPaymentTransactionStateFailed:
+                NSLog(@"交易失败");
+                break;
+            case SKPaymentTransactionStateRestored:
+                NSLog(@"已购买");
+                [self transitionRestored];
+                break;
+            default:
+                break;
+        }
+    }
+}
+/**
+ *  交易完成
+ */
+- (void) transitionCompleted
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kVIP];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+/**
+ *  已购买
+ */
+- (void) transitionRestored
+{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kVIP];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (BOOL) showAlertViewWith:(NSString *) identifier

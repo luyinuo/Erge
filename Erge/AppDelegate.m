@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Config.h"
 #import <BmobSDK/Bmob.h>
+#import "Constaint.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
     [Bmob registerWithAppKey:@"fc16b8978032b7ababb8721e77b785b1"];
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"AppInfo"];
     [bquery getObjectInBackgroundWithId:@"pyY6aaak" block:^(BmobObject *object,NSError *error){
@@ -48,6 +51,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSLog(@"applicationWillEnterForeground");
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
