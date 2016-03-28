@@ -44,6 +44,7 @@
     [self showAlertViewWith:@"score"];
    
 }
+
 - (void) openLink
 {
     NSString *address;
@@ -77,6 +78,7 @@
     }
     
 }
+
 /**
  *  获取商品信息
  */

@@ -10,7 +10,6 @@
 		198A9FE71CA4E1C7001FC537 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198A9FE61CA4E1C7001FC537 /* StoreKit.framework */; };
 		198AA6BD1CA54356001FC537 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6BC1CA54356001FC537 /* MessageUI.framework */; };
 		198AA6BF1CA54367001FC537 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6BE1CA54367001FC537 /* CoreMotion.framework */; };
-		198AA6C11CA54372001FC537 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6C01CA54372001FC537 /* PassKit.framework */; };
 		198AA6C31CA5438E001FC537 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6C21CA5438E001FC537 /* Social.framework */; };
 		198AA6C51CA543A1001FC537 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6C41CA543A1001FC537 /* EventKit.framework */; };
 		198AA6C71CA543AF001FC537 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6C61CA543AF001FC537 /* AddressBook.framework */; };
@@ -18,6 +17,51 @@
 		198AA6CB1CA54421001FC537 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6CA1CA54421001FC537 /* AudioToolbox.framework */; };
 		198AA6CD1CA5443E001FC537 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6CC1CA5443E001FC537 /* CoreMedia.framework */; };
 		198AA6CF1CA54459001FC537 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6CE1CA54459001FC537 /* QuartzCore.framework */; };
+		198AA6D11CA8C8BD001FC537 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6D01CA8C8BD001FC537 /* iflyMSC.framework */; };
+		198AA6D31CA8C8D9001FC537 /* minizip64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA6D21CA8C8D9001FC537 /* minizip64.a */; };
+		198AA7F71CA8CA36001FC537 /* adwo_alertBell.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7CE1CA8CA36001FC537 /* adwo_alertBell.png */; };
+		198AA7F81CA8CA36001FC537 /* adwo_alertLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7CF1CA8CA36001FC537 /* adwo_alertLeft.png */; };
+		198AA7F91CA8CA36001FC537 /* adwo_alertRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D01CA8CA36001FC537 /* adwo_alertRight.png */; };
+		198AA7FA1CA8CA36001FC537 /* adwo_alertSingle.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D11CA8CA36001FC537 /* adwo_alertSingle.png */; };
+		198AA7FB1CA8CA36001FC537 /* adwo_audio_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D21CA8CA36001FC537 /* adwo_audio_icon.png */; };
+		198AA7FC1CA8CA36001FC537 /* adwo_audioBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D31CA8CA36001FC537 /* adwo_audioBar.png */; };
+		198AA7FD1CA8CA36001FC537 /* adwo_audioCancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D41CA8CA36001FC537 /* adwo_audioCancel.png */; };
+		198AA7FE1CA8CA36001FC537 /* adwo_audioPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D51CA8CA36001FC537 /* adwo_audioPlay.png */; };
+		198AA7FF1CA8CA36001FC537 /* adwo_audioRecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D61CA8CA36001FC537 /* adwo_audioRecord.png */; };
+		198AA8001CA8CA36001FC537 /* adwo_audioShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D71CA8CA36001FC537 /* adwo_audioShare.png */; };
+		198AA8011CA8CA36001FC537 /* adwo_audioStop.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D81CA8CA36001FC537 /* adwo_audioStop.png */; };
+		198AA8021CA8CA36001FC537 /* adwo_cameraswitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7D91CA8CA36001FC537 /* adwo_cameraswitch.png */; };
+		198AA8031CA8CA36001FC537 /* adwo_downloadtoalbum.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7DA1CA8CA36001FC537 /* adwo_downloadtoalbum.png */; };
+		198AA8041CA8CA36001FC537 /* adwo_progress.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7DB1CA8CA36001FC537 /* adwo_progress.png */; };
+		198AA8051CA8CA36001FC537 /* adwo_recordMicrophone.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7DC1CA8CA36001FC537 /* adwo_recordMicrophone.png */; };
+		198AA8061CA8CA36001FC537 /* adwo_recordMicrophone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7DD1CA8CA36001FC537 /* adwo_recordMicrophone5.png */; };
+		198AA8071CA8CA36001FC537 /* adwo_recordSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7DE1CA8CA36001FC537 /* adwo_recordSlider.png */; };
+		198AA8081CA8CA36001FC537 /* adwo_share2sina.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7DF1CA8CA36001FC537 /* adwo_share2sina.png */; };
+		198AA8091CA8CA36001FC537 /* adwo_takephoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E01CA8CA36001FC537 /* adwo_takephoto.png */; };
+		198AA80A1CA8CA36001FC537 /* adwo_uploadProgress.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E11CA8CA36001FC537 /* adwo_uploadProgress.png */; };
+		198AA80B1CA8CA36001FC537 /* adwo_videoClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E21CA8CA36001FC537 /* adwo_videoClose.png */; };
+		198AA80C1CA8CA36001FC537 /* adwo_videoCloseBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E31CA8CA36001FC537 /* adwo_videoCloseBig.png */; };
+		198AA80D1CA8CA36001FC537 /* adwo_videoCloseBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E41CA8CA36001FC537 /* adwo_videoCloseBtn.png */; };
+		198AA80E1CA8CA36001FC537 /* adwo_videoCloseBtnBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E51CA8CA36001FC537 /* adwo_videoCloseBtnBig.png */; };
+		198AA80F1CA8CA36001FC537 /* adwo_videoDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E61CA8CA36001FC537 /* adwo_videoDetail.png */; };
+		198AA8101CA8CA36001FC537 /* adwo_videoDetailBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E71CA8CA36001FC537 /* adwo_videoDetailBig.png */; };
+		198AA8111CA8CA36001FC537 /* adwo_videoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E81CA8CA36001FC537 /* adwo_videoLogo.png */; };
+		198AA8121CA8CA36001FC537 /* adwo_videoLogoBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7E91CA8CA36001FC537 /* adwo_videoLogoBig.png */; };
+		198AA8131CA8CA36001FC537 /* adwo_videoMaximize.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7EA1CA8CA36001FC537 /* adwo_videoMaximize.png */; };
+		198AA8141CA8CA36001FC537 /* adwo_videoMaximizeBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7EB1CA8CA36001FC537 /* adwo_videoMaximizeBig.png */; };
+		198AA8151CA8CA36001FC537 /* adwo_videoMinimize.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7EC1CA8CA36001FC537 /* adwo_videoMinimize.png */; };
+		198AA8161CA8CA36001FC537 /* adwo_videoMinimizeBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7ED1CA8CA36001FC537 /* adwo_videoMinimizeBig.png */; };
+		198AA8171CA8CA36001FC537 /* adwo_videoMute.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7EE1CA8CA36001FC537 /* adwo_videoMute.png */; };
+		198AA8181CA8CA36001FC537 /* adwo_videoMuteBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7EF1CA8CA36001FC537 /* adwo_videoMuteBig.png */; };
+		198AA8191CA8CA36001FC537 /* adwo_videoPlayerControl.html in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F01CA8CA36001FC537 /* adwo_videoPlayerControl.html */; };
+		198AA81A1CA8CA36001FC537 /* adwo_videoReplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F11CA8CA36001FC537 /* adwo_videoReplay.png */; };
+		198AA81B1CA8CA36001FC537 /* adwo_videoReplayBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F21CA8CA36001FC537 /* adwo_videoReplayBig.png */; };
+		198AA81C1CA8CA36001FC537 /* adwo_videoSound.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F31CA8CA36001FC537 /* adwo_videoSound.png */; };
+		198AA81D1CA8CA36001FC537 /* adwo_videoSoundBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F41CA8CA36001FC537 /* adwo_videoSoundBig.png */; };
+		198AA81E1CA8CA36001FC537 /* adwo_videoTimeRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F51CA8CA36001FC537 /* adwo_videoTimeRectangle.png */; };
+		198AA81F1CA8CA36001FC537 /* adwo_videoTimeRectangleBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 198AA7F61CA8CA36001FC537 /* adwo_videoTimeRectangleBig.png */; };
+		198AA8271CA8DBC4001FC537 /* libAdwoSDKRelease6.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 198AA8261CA8DBC4001FC537 /* libAdwoSDKRelease6.9.a */; };
+		198AA82D1CA8F8A4001FC537 /* AdwoFSAdContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 198AA82B1CA8F8A4001FC537 /* AdwoFSAdContainer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		487763851C72E86B00F113F2 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 487763841C72E86B00F113F2 /* FeedbackViewController.m */; };
 		487763881C72EF6000F113F2 /* NSString+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = 487763871C72EF6000F113F2 /* NSString+Remind.m */; };
 		4877638A1C72F0CB00F113F2 /* Remind.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487763891C72F0CB00F113F2 /* Remind.xib */; };
@@ -99,7 +143,6 @@
 		198A9FE61CA4E1C7001FC537 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		198AA6BC1CA54356001FC537 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		198AA6BE1CA54367001FC537 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		198AA6C01CA54372001FC537 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		198AA6C21CA5438E001FC537 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		198AA6C41CA543A1001FC537 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		198AA6C61CA543AF001FC537 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -107,6 +150,54 @@
 		198AA6CA1CA54421001FC537 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		198AA6CC1CA5443E001FC537 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		198AA6CE1CA54459001FC537 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		198AA6D01CA8C8BD001FC537 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = Erge/Framework/iflyMSC.framework; sourceTree = "<group>"; };
+		198AA6D21CA8C8D9001FC537 /* minizip64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = minizip64.a; path = Erge/Framework/minizip64.a; sourceTree = "<group>"; };
+		198AA7CE1CA8CA36001FC537 /* adwo_alertBell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_alertBell.png; sourceTree = "<group>"; };
+		198AA7CF1CA8CA36001FC537 /* adwo_alertLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_alertLeft.png; sourceTree = "<group>"; };
+		198AA7D01CA8CA36001FC537 /* adwo_alertRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_alertRight.png; sourceTree = "<group>"; };
+		198AA7D11CA8CA36001FC537 /* adwo_alertSingle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_alertSingle.png; sourceTree = "<group>"; };
+		198AA7D21CA8CA36001FC537 /* adwo_audio_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audio_icon.png; sourceTree = "<group>"; };
+		198AA7D31CA8CA36001FC537 /* adwo_audioBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audioBar.png; sourceTree = "<group>"; };
+		198AA7D41CA8CA36001FC537 /* adwo_audioCancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audioCancel.png; sourceTree = "<group>"; };
+		198AA7D51CA8CA36001FC537 /* adwo_audioPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audioPlay.png; sourceTree = "<group>"; };
+		198AA7D61CA8CA36001FC537 /* adwo_audioRecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audioRecord.png; sourceTree = "<group>"; };
+		198AA7D71CA8CA36001FC537 /* adwo_audioShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audioShare.png; sourceTree = "<group>"; };
+		198AA7D81CA8CA36001FC537 /* adwo_audioStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_audioStop.png; sourceTree = "<group>"; };
+		198AA7D91CA8CA36001FC537 /* adwo_cameraswitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_cameraswitch.png; sourceTree = "<group>"; };
+		198AA7DA1CA8CA36001FC537 /* adwo_downloadtoalbum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_downloadtoalbum.png; sourceTree = "<group>"; };
+		198AA7DB1CA8CA36001FC537 /* adwo_progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_progress.png; sourceTree = "<group>"; };
+		198AA7DC1CA8CA36001FC537 /* adwo_recordMicrophone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_recordMicrophone.png; sourceTree = "<group>"; };
+		198AA7DD1CA8CA36001FC537 /* adwo_recordMicrophone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_recordMicrophone5.png; sourceTree = "<group>"; };
+		198AA7DE1CA8CA36001FC537 /* adwo_recordSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_recordSlider.png; sourceTree = "<group>"; };
+		198AA7DF1CA8CA36001FC537 /* adwo_share2sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_share2sina.png; sourceTree = "<group>"; };
+		198AA7E01CA8CA36001FC537 /* adwo_takephoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_takephoto.png; sourceTree = "<group>"; };
+		198AA7E11CA8CA36001FC537 /* adwo_uploadProgress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_uploadProgress.png; sourceTree = "<group>"; };
+		198AA7E21CA8CA36001FC537 /* adwo_videoClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoClose.png; sourceTree = "<group>"; };
+		198AA7E31CA8CA36001FC537 /* adwo_videoCloseBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoCloseBig.png; sourceTree = "<group>"; };
+		198AA7E41CA8CA36001FC537 /* adwo_videoCloseBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoCloseBtn.png; sourceTree = "<group>"; };
+		198AA7E51CA8CA36001FC537 /* adwo_videoCloseBtnBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoCloseBtnBig.png; sourceTree = "<group>"; };
+		198AA7E61CA8CA36001FC537 /* adwo_videoDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoDetail.png; sourceTree = "<group>"; };
+		198AA7E71CA8CA36001FC537 /* adwo_videoDetailBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoDetailBig.png; sourceTree = "<group>"; };
+		198AA7E81CA8CA36001FC537 /* adwo_videoLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoLogo.png; sourceTree = "<group>"; };
+		198AA7E91CA8CA36001FC537 /* adwo_videoLogoBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoLogoBig.png; sourceTree = "<group>"; };
+		198AA7EA1CA8CA36001FC537 /* adwo_videoMaximize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoMaximize.png; sourceTree = "<group>"; };
+		198AA7EB1CA8CA36001FC537 /* adwo_videoMaximizeBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoMaximizeBig.png; sourceTree = "<group>"; };
+		198AA7EC1CA8CA36001FC537 /* adwo_videoMinimize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoMinimize.png; sourceTree = "<group>"; };
+		198AA7ED1CA8CA36001FC537 /* adwo_videoMinimizeBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoMinimizeBig.png; sourceTree = "<group>"; };
+		198AA7EE1CA8CA36001FC537 /* adwo_videoMute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoMute.png; sourceTree = "<group>"; };
+		198AA7EF1CA8CA36001FC537 /* adwo_videoMuteBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoMuteBig.png; sourceTree = "<group>"; };
+		198AA7F01CA8CA36001FC537 /* adwo_videoPlayerControl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = adwo_videoPlayerControl.html; sourceTree = "<group>"; };
+		198AA7F11CA8CA36001FC537 /* adwo_videoReplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoReplay.png; sourceTree = "<group>"; };
+		198AA7F21CA8CA36001FC537 /* adwo_videoReplayBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoReplayBig.png; sourceTree = "<group>"; };
+		198AA7F31CA8CA36001FC537 /* adwo_videoSound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoSound.png; sourceTree = "<group>"; };
+		198AA7F41CA8CA36001FC537 /* adwo_videoSoundBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoSoundBig.png; sourceTree = "<group>"; };
+		198AA7F51CA8CA36001FC537 /* adwo_videoTimeRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoTimeRectangle.png; sourceTree = "<group>"; };
+		198AA7F61CA8CA36001FC537 /* adwo_videoTimeRectangleBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoTimeRectangleBig.png; sourceTree = "<group>"; };
+		198AA8221CA8D6EE001FC537 /* AWUnity3DContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWUnity3DContainer.h; sourceTree = "<group>"; };
+		198AA8251CA8DB94001FC537 /* AdwoAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdwoAdSDK.h; path = Erge/sdk_lib/AdwoAdSDK.h; sourceTree = SOURCE_ROOT; };
+		198AA8261CA8DBC4001FC537 /* libAdwoSDKRelease6.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdwoSDKRelease6.9.a; path = Erge/sdk_lib/libAdwoSDKRelease6.9.a; sourceTree = SOURCE_ROOT; };
+		198AA82B1CA8F8A4001FC537 /* AdwoFSAdContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdwoFSAdContainer.m; path = Erge/sdk_lib/AdwoFSAdContainer.m; sourceTree = SOURCE_ROOT; };
+		198AA82C1CA8F8A4001FC537 /* AdwoFSAdContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdwoFSAdContainer.h; path = Erge/sdk_lib/AdwoFSAdContainer.h; sourceTree = SOURCE_ROOT; };
 		4840913F1C8EAAC800A34A3B /* Constaint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constaint.h; path = ../Constaint.h; sourceTree = "<group>"; };
 		487763831C72E86B00F113F2 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		487763841C72E86B00F113F2 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
@@ -202,6 +293,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198AA6D31CA8C8D9001FC537 /* minizip64.a in Frameworks */,
+				198AA6D11CA8C8BD001FC537 /* iflyMSC.framework in Frameworks */,
 				198AA6CF1CA54459001FC537 /* QuartzCore.framework in Frameworks */,
 				198AA6CD1CA5443E001FC537 /* CoreMedia.framework in Frameworks */,
 				198AA6CB1CA54421001FC537 /* AudioToolbox.framework in Frameworks */,
@@ -210,8 +303,8 @@
 				198AA6C71CA543AF001FC537 /* AddressBook.framework in Frameworks */,
 				198AA6C51CA543A1001FC537 /* EventKit.framework in Frameworks */,
 				198AA6C31CA5438E001FC537 /* Social.framework in Frameworks */,
-				198AA6C11CA54372001FC537 /* PassKit.framework in Frameworks */,
 				198AA6BF1CA54367001FC537 /* CoreMotion.framework in Frameworks */,
+				198AA8271CA8DBC4001FC537 /* libAdwoSDKRelease6.9.a in Frameworks */,
 				198AA6BD1CA54356001FC537 /* MessageUI.framework in Frameworks */,
 				4877639A1C72FA6900F113F2 /* SystemConfiguration.framework in Frameworks */,
 				487763A41C72FAA200F113F2 /* MediaPlayer.framework in Frameworks */,
@@ -239,6 +332,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		198AA7CD1CA8CA35001FC537 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				198AA7CE1CA8CA36001FC537 /* adwo_alertBell.png */,
+				198AA7CF1CA8CA36001FC537 /* adwo_alertLeft.png */,
+				198AA7D01CA8CA36001FC537 /* adwo_alertRight.png */,
+				198AA7D11CA8CA36001FC537 /* adwo_alertSingle.png */,
+				198AA7D21CA8CA36001FC537 /* adwo_audio_icon.png */,
+				198AA7D31CA8CA36001FC537 /* adwo_audioBar.png */,
+				198AA7D41CA8CA36001FC537 /* adwo_audioCancel.png */,
+				198AA7D51CA8CA36001FC537 /* adwo_audioPlay.png */,
+				198AA7D61CA8CA36001FC537 /* adwo_audioRecord.png */,
+				198AA7D71CA8CA36001FC537 /* adwo_audioShare.png */,
+				198AA7D81CA8CA36001FC537 /* adwo_audioStop.png */,
+				198AA7D91CA8CA36001FC537 /* adwo_cameraswitch.png */,
+				198AA7DA1CA8CA36001FC537 /* adwo_downloadtoalbum.png */,
+				198AA7DB1CA8CA36001FC537 /* adwo_progress.png */,
+				198AA7DC1CA8CA36001FC537 /* adwo_recordMicrophone.png */,
+				198AA7DD1CA8CA36001FC537 /* adwo_recordMicrophone5.png */,
+				198AA7DE1CA8CA36001FC537 /* adwo_recordSlider.png */,
+				198AA7DF1CA8CA36001FC537 /* adwo_share2sina.png */,
+				198AA7E01CA8CA36001FC537 /* adwo_takephoto.png */,
+				198AA7E11CA8CA36001FC537 /* adwo_uploadProgress.png */,
+				198AA7E21CA8CA36001FC537 /* adwo_videoClose.png */,
+				198AA7E31CA8CA36001FC537 /* adwo_videoCloseBig.png */,
+				198AA7E41CA8CA36001FC537 /* adwo_videoCloseBtn.png */,
+				198AA7E51CA8CA36001FC537 /* adwo_videoCloseBtnBig.png */,
+				198AA7E61CA8CA36001FC537 /* adwo_videoDetail.png */,
+				198AA7E71CA8CA36001FC537 /* adwo_videoDetailBig.png */,
+				198AA7E81CA8CA36001FC537 /* adwo_videoLogo.png */,
+				198AA7E91CA8CA36001FC537 /* adwo_videoLogoBig.png */,
+				198AA7EA1CA8CA36001FC537 /* adwo_videoMaximize.png */,
+				198AA7EB1CA8CA36001FC537 /* adwo_videoMaximizeBig.png */,
+				198AA7EC1CA8CA36001FC537 /* adwo_videoMinimize.png */,
+				198AA7ED1CA8CA36001FC537 /* adwo_videoMinimizeBig.png */,
+				198AA7EE1CA8CA36001FC537 /* adwo_videoMute.png */,
+				198AA7EF1CA8CA36001FC537 /* adwo_videoMuteBig.png */,
+				198AA7F01CA8CA36001FC537 /* adwo_videoPlayerControl.html */,
+				198AA7F11CA8CA36001FC537 /* adwo_videoReplay.png */,
+				198AA7F21CA8CA36001FC537 /* adwo_videoReplayBig.png */,
+				198AA7F31CA8CA36001FC537 /* adwo_videoSound.png */,
+				198AA7F41CA8CA36001FC537 /* adwo_videoSoundBig.png */,
+				198AA7F51CA8CA36001FC537 /* adwo_videoTimeRectangle.png */,
+				198AA7F61CA8CA36001FC537 /* adwo_videoTimeRectangleBig.png */,
+			);
+			name = res;
+			path = Erge/res;
+			sourceTree = SOURCE_ROOT;
+		};
+		198AA8201CA8D6EE001FC537 /* sdk_lib */ = {
+			isa = PBXGroup;
+			children = (
+				198AA82C1CA8F8A4001FC537 /* AdwoFSAdContainer.h */,
+				198AA82B1CA8F8A4001FC537 /* AdwoFSAdContainer.m */,
+				198AA8261CA8DBC4001FC537 /* libAdwoSDKRelease6.9.a */,
+				198AA8251CA8DB94001FC537 /* AdwoAdSDK.h */,
+				198AA8221CA8D6EE001FC537 /* AWUnity3DContainer.h */,
+			);
+			name = sdk_lib;
+			path = Erge/sdk_lib;
+			sourceTree = "<group>";
+		};
 		487763A51C73004700F113F2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +406,8 @@
 		487763A91C7314CA00F113F2 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
+				198AA8201CA8D6EE001FC537 /* sdk_lib */,
+				198AA7CD1CA8CA35001FC537 /* res */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -269,6 +426,8 @@
 		48D335831C4DD86400FBE6DF = {
 			isa = PBXGroup;
 			children = (
+				198AA6D21CA8C8D9001FC537 /* minizip64.a */,
+				198AA6D01CA8C8BD001FC537 /* iflyMSC.framework */,
 				198AA6CE1CA54459001FC537 /* QuartzCore.framework */,
 				198AA6CC1CA5443E001FC537 /* CoreMedia.framework */,
 				198AA6CA1CA54421001FC537 /* AudioToolbox.framework */,
@@ -276,7 +435,6 @@
 				198AA6C61CA543AF001FC537 /* AddressBook.framework */,
 				198AA6C41CA543A1001FC537 /* EventKit.framework */,
 				198AA6C21CA5438E001FC537 /* Social.framework */,
-				198AA6C01CA54372001FC537 /* PassKit.framework */,
 				198AA6BE1CA54367001FC537 /* CoreMotion.framework */,
 				198AA6BC1CA54356001FC537 /* MessageUI.framework */,
 				48D3358E1C4DD86400FBE6DF /* Erge */,
@@ -486,6 +644,9 @@
 							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
+							com.apple.Wallet = {
+								enabled = 0;
+							};
 						};
 					};
 					48D335A41C4DD86500FBE6DF = {
@@ -519,37 +680,78 @@
 			buildActionMask = 2147483647;
 			files = (
 				4877638A1C72F0CB00F113F2 /* Remind.xib in Resources */,
+				198AA81A1CA8CA36001FC537 /* adwo_videoReplay.png in Resources */,
+				198AA8161CA8CA36001FC537 /* adwo_videoMinimizeBig.png in Resources */,
+				198AA81E1CA8CA36001FC537 /* adwo_videoTimeRectangle.png in Resources */,
 				48D335DC1C4E3E9500FBE6DF /* courseInfo_backS@3x.png in Resources */,
 				48D335E01C4E3F1A00FBE6DF /* courseInfo_yd_volume@2x.png in Resources */,
 				48D335F01C4E40F300FBE6DF /* player_pause@3x.png in Resources */,
 				487763B11C7323D600F113F2 /* player_playS@3x.png in Resources */,
 				48D335D61C4E3D3A00FBE6DF /* courseInfo_quickBack.png in Resources */,
+				198AA80C1CA8CA36001FC537 /* adwo_videoCloseBig.png in Resources */,
 				48D335E31C4E3F5500FBE6DF /* player_exitScreen@2x.png in Resources */,
+				198AA8031CA8CA36001FC537 /* adwo_downloadtoalbum.png in Resources */,
 				48D335F31C4E418D00FBE6DF /* player_screen@2x.png in Resources */,
+				198AA81F1CA8CA36001FC537 /* adwo_videoTimeRectangleBig.png in Resources */,
+				198AA8101CA8CA36001FC537 /* adwo_videoDetailBig.png in Resources */,
 				48D3359B1C4DD86500FBE6DF /* Main.storyboard in Resources */,
 				487763B01C7323D600F113F2 /* player_playS@2x.png in Resources */,
+				198AA8051CA8CA36001FC537 /* adwo_recordMicrophone.png in Resources */,
+				198AA8111CA8CA36001FC537 /* adwo_videoLogo.png in Resources */,
 				48D335F41C4E418D00FBE6DF /* player_screen@3x.png in Resources */,
 				48D335DB1C4E3E9500FBE6DF /* courseInfo_backS@2x.png in Resources */,
 				48D335CE1C4E3C6100FBE6DF /* courseInfo_volume.png in Resources */,
+				198AA8021CA8CA36001FC537 /* adwo_cameraswitch.png in Resources */,
+				198AA81D1CA8CA36001FC537 /* adwo_videoSoundBig.png in Resources */,
+				198AA7FB1CA8CA36001FC537 /* adwo_audio_icon.png in Resources */,
+				198AA8121CA8CA36001FC537 /* adwo_videoLogoBig.png in Resources */,
+				198AA8151CA8CA36001FC537 /* adwo_videoMinimize.png in Resources */,
 				48D335C61C4E3B0000FBE6DF /* courseInfoYd.xib in Resources */,
 				48D335D41C4E3CC600FBE6DF /* courseInfo_quickGo.png in Resources */,
+				198AA8141CA8CA36001FC537 /* adwo_videoMaximizeBig.png in Resources */,
+				198AA8091CA8CA36001FC537 /* adwo_takephoto.png in Resources */,
+				198AA80D1CA8CA36001FC537 /* adwo_videoCloseBtn.png in Resources */,
+				198AA8181CA8CA36001FC537 /* adwo_videoMuteBig.png in Resources */,
 				48D335BC1C4E2D0700FBE6DF /* TableViewCell.xib in Resources */,
+				198AA8041CA8CA36001FC537 /* adwo_progress.png in Resources */,
+				198AA80B1CA8CA36001FC537 /* adwo_videoClose.png in Resources */,
+				198AA7FC1CA8CA36001FC537 /* adwo_audioBar.png in Resources */,
 				48D335A01C4DD86500FBE6DF /* LaunchScreen.xib in Resources */,
+				198AA81B1CA8CA36001FC537 /* adwo_videoReplayBig.png in Resources */,
 				487763AF1C7323D600F113F2 /* player_pauseS@3x.png in Resources */,
 				48D335CC1C4E3C2400FBE6DF /* courseInfo_yd_goBack@2x.png in Resources */,
+				198AA8001CA8CA36001FC537 /* adwo_audioShare.png in Resources */,
 				48D335E71C4E401900FBE6DF /* player_progressBt@2x.png in Resources */,
 				48D335E41C4E3F5500FBE6DF /* player_exitScreen@3x.png in Resources */,
+				198AA8081CA8CA36001FC537 /* adwo_share2sina.png in Resources */,
 				48D335EC1C4E409F00FBE6DF /* player_play@3x.png in Resources */,
+				198AA8191CA8CA36001FC537 /* adwo_videoPlayerControl.html in Resources */,
 				48D335C71C4E3B0000FBE6DF /* playerControls.xib in Resources */,
 				48D335EF1C4E40F300FBE6DF /* player_pause@2x.png in Resources */,
 				48D335DE1C4E3EF900FBE6DF /* courseInfo_yd_light@2x.png in Resources */,
+				198AA80A1CA8CA36001FC537 /* adwo_uploadProgress.png in Resources */,
+				198AA7FD1CA8CA36001FC537 /* adwo_audioCancel.png in Resources */,
+				198AA8011CA8CA36001FC537 /* adwo_audioStop.png in Resources */,
 				48D3359D1C4DD86500FBE6DF /* Images.xcassets in Resources */,
+				198AA80E1CA8CA36001FC537 /* adwo_videoCloseBtnBig.png in Resources */,
 				48D335E81C4E401900FBE6DF /* player_progressBt@3x.png in Resources */,
+				198AA7FA1CA8CA36001FC537 /* adwo_alertSingle.png in Resources */,
 				487D59721C6057BD00F3A4FF /* DownloadTableViewCell.xib in Resources */,
+				198AA8071CA8CA36001FC537 /* adwo_recordSlider.png in Resources */,
+				198AA7FF1CA8CA36001FC537 /* adwo_audioRecord.png in Resources */,
 				487763AE1C7323D600F113F2 /* player_pauseS@2x.png in Resources */,
+				198AA81C1CA8CA36001FC537 /* adwo_videoSound.png in Resources */,
 				48D335B71C4E150E00FBE6DF /* source.plist in Resources */,
+				198AA80F1CA8CA36001FC537 /* adwo_videoDetail.png in Resources */,
 				48D335D81C4E3D5E00FBE6DF /* courseInfo_light.png in Resources */,
+				198AA7F71CA8CA36001FC537 /* adwo_alertBell.png in Resources */,
+				198AA8171CA8CA36001FC537 /* adwo_videoMute.png in Resources */,
+				198AA7F81CA8CA36001FC537 /* adwo_alertLeft.png in Resources */,
+				198AA7F91CA8CA36001FC537 /* adwo_alertRight.png in Resources */,
 				48D335EB1C4E409F00FBE6DF /* player_play@2x.png in Resources */,
+				198AA7FE1CA8CA36001FC537 /* adwo_audioPlay.png in Resources */,
+				198AA8061CA8CA36001FC537 /* adwo_recordMicrophone5.png in Resources */,
+				198AA8131CA8CA36001FC537 /* adwo_videoMaximize.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +787,7 @@
 				487D59711C6057BD00F3A4FF /* DownloadTableViewCell.m in Sources */,
 				487D596D1C60491000F3A4FF /* MyDownloadTableViewController.m in Sources */,
 				48D335C81C4E3B0000FBE6DF /* WKPlayerVideoList.m in Sources */,
+				198AA82D1CA8F8A4001FC537 /* AdwoFSAdContainer.m in Sources */,
 				487763851C72E86B00F113F2 /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +919,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Erge/Framework",
@@ -723,7 +927,11 @@
 				INFOPLIST_FILE = Erge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-lstdc++";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Erge/sdk_lib",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -737,6 +945,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Erge/Framework",
@@ -744,7 +953,11 @@
 				INFOPLIST_FILE = Erge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-lstdc++";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Erge/sdk_lib",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

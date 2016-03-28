@@ -238,7 +238,7 @@
 #pragma mark 播放器的通知回调
 
 - (void) moviePlayerLoadStateDidChange:(NSNotification*)notification {
-//    WKMPMoviePlayerController *player = notification.object;
+    WKMPMoviePlayerController *player = notification.object;
     MPMovieLoadState loadState = self.loadState;
     
     [_viewPlayerLoading setAlpha:0];
@@ -246,7 +246,9 @@
     
     if(loadState == MPMovieLoadStateUnknown){
         NSLog(@"MPMovieLoadStateUnknown");
-        
+        player.contentURL = self.contentURL;
+        [player prepareToPlay];
+        return;
     }
     if(loadState & MPMovieLoadStatePlayable){
         //第一次加载，或者前后拖动完成之后 /
@@ -418,6 +420,9 @@
 - (void)clickPlay{
     if (self.playbackState == MPMoviePlaybackStatePlaying) {
         [self pause];
+        if ([self.delegate respondsToSelector:@selector(wkMpMoviePlayerControllerClickPause)]) {
+            [self.delegate wkMpMoviePlayerControllerClickPause];
+        }
     }else{
         [self play];
     }

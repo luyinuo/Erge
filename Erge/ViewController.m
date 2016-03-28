@@ -10,8 +10,13 @@
 #import "TableViewCell.h"
 #import "VideoModel.h"
 #import "VideoViewController.h"
+#import "AdwoAdSDK.h"
+#include "Constaint.h"
+
+//ADWO_SDK_WITHOUT_PASSKIT_FRAMEWORK()
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (weak, nonatomic) IBOutlet UITableView *oneTableView;
 @property (weak, nonatomic) IBOutlet UITableView *twoTableView;
@@ -38,6 +43,14 @@
     [self setTabBarItemIcon:@"icon_home_h"];
     
     [self loadData];
+    //加载全屏广告
+//    [self showButtonTouched:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showButtonTouched:) name:@"applicationWillEnterForeground" object:nil];
+    
+}
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -148,6 +161,7 @@
     return cell;
     
 }
+
 
 
 @end

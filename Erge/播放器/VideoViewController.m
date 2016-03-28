@@ -10,8 +10,14 @@
 #import "WKMPMoviePlayerController.h"
 #import "NSString+Remind.h"
 #import "Constaint.h"
+#import "AdwoAdSDK.h"
+#import "AdwoFSAdContainer.h"
 
-@interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate>
+@interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate,AWAdViewDelegate>
+{
+    UIView *mAdView;//bannar
+    
+}
 @property (nonatomic, strong) NSMutableDictionary *downloadDic;
 @end
 
@@ -57,6 +63,39 @@
     //1.0版本被拒临时处理方案
     downloadBtn.hidden = isHideDownload;
     [downloadBtn addTarget:self action:@selector(clickDownload:) forControlEvents:UIControlEventTouchUpInside];
+    // 创建广告banner
+    mAdView = AdwoAdCreateBanner(ADWO_PUBLISH_ID_FOR_DEMO, ADWO_FSAD_TEST_MODE, self);
+    if(mAdView == nil)
+    {
+        NSLog(@"Banner广告创建失败");
+        return;
+    }
+    
+    // 设置放置Banner的位置
+    mAdView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 320.0) * 0.5, [UIScreen mainScreen].bounds.size.height - 50, 320.0, 50.0);
+    // 将当前的广告Banner放到父视图上
+    AdwoAdAddBannerToSuperView(mAdView, self.view);
+    
+    // 加载广告banner
+    AdwoAdLoadBannerAd(mAdView, ADWO_ADSDK_BANNER_SIZE_NORMAL_BANNER, NULL);
+    //全屏广告
+    [AdwoFSAdContainer startWithViewController:self target:self adLoadedMsg:@selector(fsAdDidLoad:)];
+    [AdwoFSAdContainer loadFSAds];
+}
+
+- (void)fsAdDidLoad:(UIView*)adView
+{
+//    [AdwoFSAdContainer showLaunchingAd];
+    [AdwoFSAdContainer showNormalAd];
+}
+
+#pragma mark - screen orientation
+
+/** 要支持横屏和竖屏切换，必须使用以下方法 */
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -103,14 +142,35 @@
     sender.enabled = NO;
     [@"下载成功,请到个人中心我的下载查看" showRemind:nil];
 }
-- (void)viewDidDisappear:(BOOL)animated
+//- (void)viewDidDisappear:(BOOL)animated
+//{
+//    [super viewDidDisappear:animated];
+//    
+//}
+
+- (void) dealloc
 {
-    [super viewDidDisappear:animated];
     moviePlayerController.isPop = YES;
     [moviePlayerController stop];
     [moviePlayerController.timerUpdateState invalidate];
     moviePlayerController = nil;
     [[NSFileManager defaultManager] removeItemAtPath:mzDirPlayCache error:nil];
+    [self removeADView];
+}
+/**
+ *  移除bannar广告
+ */
+- (void) removeADView
+{
+    // 释放adView
+    if(mAdView != nil)
+    {
+        if(AdwoAdRemoveAndDestroyBanner(mAdView))
+            NSLog(@"Banner被移除咯～");
+        
+        mAdView = nil;
+    }
+
 }
 
 //加载播放器
@@ -157,6 +217,14 @@
     //    }
 }
 
+/**
+ *  点击暂停
+ */
+- (void) wkMpMoviePlayerControllerClickPause
+{
+    NSLog(@"pause .....");
+    [AdwoFSAdContainer showNormalAd];
+}
 -(void)wkMPMoviePlayerControllerClickBack{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -166,6 +234,25 @@
         moviePlayerController.view.hidden = NO;
         [moviePlayerController.view.superview bringSubviewToFront:moviePlayerController.view];
     }
+}
+
+#pragma mark - Adwo Ad Delegates
+
+// 此接口必须被实现，并且不能返回空！
+- (UIViewController*)adwoGetBaseViewController
+{
+    return self;
+}
+
+- (void)adwoAdViewDidFailToLoadAd:(UIView*)adview
+{
+    int errCode = AdwoAdGetLatestErrorCode();
+    NSLog(@"广告请求失败，由于：%@", adwoResponseErrorInfoList[errCode]);
+}
+
+- (void)adwoAdViewDidLoadAd:(UIView*)adview
+{
+    NSLog(@"广告已加载");
 }
 
 

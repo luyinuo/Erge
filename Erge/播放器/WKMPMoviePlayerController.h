@@ -22,6 +22,7 @@
 
 - (void)wkMPMoviePlayerControllerClickBack;
 - (void)wkMPMoviePlayerControllerEnterFullScreen:(BOOL )isFullScreen;
+- (void)wkMpMoviePlayerControllerClickPause;
 
 @end
 

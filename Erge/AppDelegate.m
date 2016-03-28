@@ -10,8 +10,14 @@
 #import "Config.h"
 #import <BmobSDK/Bmob.h>
 #import "Constaint.h"
-@interface AppDelegate ()
+#import "AdwoAdSDK.h"
+// 由于工程里没有添加Passbook.framework，因此加上这句话来避免连接错误
+ADWO_SDK_WITHOUT_PASSKIT_FRAMEWORK(I do not need PassKit framework)
 
+@interface AppDelegate ()<AWAdViewDelegate>
+{
+    UIView *AdView;//full screen
+}
 @end
 
 @implementation AppDelegate
@@ -36,6 +42,8 @@
             }
         }
     }];
+    
+    
     return YES;
 }
 
@@ -52,6 +60,8 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     NSLog(@"applicationWillEnterForeground");
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillEnterForeground" object:nil];
+    [self showButtonTouched:nil];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -69,6 +79,66 @@
             [downloadDic writeToFile:downloadPlistPath atomically:YES];
         }
     }
+}
+
+- (void)showButtonTouched:(id)sender
+{
+    if(AdView != nil)
+        return;
+    
+    // 初始化AWAdView对象
+    AdView = AdwoAdGetFullScreenAdHandle(ADWO_PUBLISH_ID_FOR_DEMO, ADWO_FSAD_TEST_MODE, self, ADWOSDK_FSAD_SHOW_FORM_APPFUN_WITH_BRAND);
+    if(AdView == nil)
+    {
+        NSLog(@"Adwo full-screen ad failed to create!");
+        return;
+    }
+    
+    // 这里使用ADWO_ADSDK_AD_TYPE_FULL_SCREEN标签来加载全屏广告
+    // 全屏广告是立即加载的，因此不需要设置adRequestTimeIntervel属性，当然也不需要设置其frame属性
+    if(!AdwoAdLoadFullScreenAd(AdView, NO, NULL))
+    {
+        NSLog(@"加载失败，由于：%d", AdwoAdGetLatestErrorCode());
+        AdView = nil;  // 若加载失败，则SDK将会自动销毁当前的全屏广告对象，此时将全屏广告对象引用置空即可
+    }
+}
+
+#pragma mark - ad delegate
+// 此接口必须被实现，并且不能返回空！
+- (UIViewController*)adwoGetBaseViewController
+{
+    return [UIApplication sharedApplication].keyWindow.rootViewController;
+}
+
+- (void)adwoAdViewDidFailToLoadAd:(UIView*)ad
+{
+    NSLog(@"Failed to load ad! Because: %@",adwoResponseErrorInfoList[AdwoAdGetLatestErrorCode()]);
+    
+    AdView = nil;
+}
+
+- (void)adwoAdViewDidLoadAd:(UIView*)ad
+{
+    NSLog(@"Ad did load!");
+    
+    // 广告加载成功，可以把全屏广告展示上去
+    AdwoAdShowFullScreenAd(AdView);
+}
+
+- (void)adwoFullScreenAdDismissed:(UIView*)ad
+{
+    NSLog(@"Full-screen ad closed by user!");
+    AdView = nil;
+}
+
+- (void)adwoDidPresentModalViewForAd:(UIView*)ad
+{
+    NSLog(@"Browser presented!");
+}
+
+- (void)adwoDidDismissModalViewForAd:(UIView*)ad
+{
+    NSLog(@"Browser dismissed!");
 }
 
 @end
