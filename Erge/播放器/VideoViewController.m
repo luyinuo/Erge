@@ -16,6 +16,7 @@
 @interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate,AWAdViewDelegate>
 {
     UIView *mAdView;//bannar
+    UIView *AdView;//全屏广告
     
 }
 @property (nonatomic, strong) NSMutableDictionary *downloadDic;
@@ -78,25 +79,30 @@
     
     // 加载广告banner
     AdwoAdLoadBannerAd(mAdView, ADWO_ADSDK_BANNER_SIZE_NORMAL_BANNER, NULL);
-    //全屏广告
-    [AdwoFSAdContainer startWithViewController:self target:self adLoadedMsg:@selector(fsAdDidLoad:)];
-    [AdwoFSAdContainer loadFSAds];
 }
 
-- (void)fsAdDidLoad:(UIView*)adView
+- (void)showFullScreenAD
 {
-//    [AdwoFSAdContainer showLaunchingAd];
-    [AdwoFSAdContainer showNormalAd];
+    if(AdView != nil)
+        return;
+    
+    // 初始化AWAdView对象
+    AdView = AdwoAdGetFullScreenAdHandle(ADWO_PUBLISH_ID_FOR_DEMO, YES, self, ADWOSDK_FSAD_SHOW_FORM_APPFUN_WITH_BRAND);
+    if(AdView == nil)
+    {
+        NSLog(@"Adwo full-screen ad failed to create!");
+        return;
+    }
+    
+    // 这里使用ADWO_ADSDK_AD_TYPE_FULL_SCREEN标签来加载全屏广告
+    // 全屏广告是立即加载的，因此不需要设置adRequestTimeIntervel属性，当然也不需要设置其frame属性
+    if(!AdwoAdLoadFullScreenAd(AdView, NO, NULL))
+    {
+        NSLog(@"加载失败，由于：%d", AdwoAdGetLatestErrorCode());
+        AdView = nil;  // 若加载失败，则SDK将会自动销毁当前的全屏广告对象，此时将全屏广告对象引用置空即可
+    }
 }
 
-#pragma mark - screen orientation
-
-/** 要支持横屏和竖屏切换，必须使用以下方法 */
-
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
 
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -142,11 +148,6 @@
     sender.enabled = NO;
     [@"下载成功,请到个人中心我的下载查看" showRemind:nil];
 }
-//- (void)viewDidDisappear:(BOOL)animated
-//{
-//    [super viewDidDisappear:animated];
-//    
-//}
 
 - (void) dealloc
 {
@@ -223,7 +224,7 @@
 - (void) wkMpMoviePlayerControllerClickPause
 {
     NSLog(@"pause .....");
-    [AdwoFSAdContainer showNormalAd];
+    [self showFullScreenAD];
 }
 -(void)wkMPMoviePlayerControllerClickBack{
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -236,24 +237,44 @@
     }
 }
 
-#pragma mark - Adwo Ad Delegates
-
+#pragma mark - ad delegate
 // 此接口必须被实现，并且不能返回空！
 - (UIViewController*)adwoGetBaseViewController
 {
     return self;
 }
 
-- (void)adwoAdViewDidFailToLoadAd:(UIView*)adview
+- (void)adwoAdViewDidFailToLoadAd:(UIView*)ad
 {
-    int errCode = AdwoAdGetLatestErrorCode();
-    NSLog(@"广告请求失败，由于：%@", adwoResponseErrorInfoList[errCode]);
+    NSLog(@"Failed to load ad! Because: %d",AdwoAdGetLatestErrorCode());
+    
+    AdView = nil;
 }
 
-- (void)adwoAdViewDidLoadAd:(UIView*)adview
+- (void)adwoAdViewDidLoadAd:(UIView*)ad
 {
-    NSLog(@"广告已加载");
+    NSLog(@"Ad did load!");
+    
+    // 广告加载成功，可以把全屏广告展示上去
+    AdwoAdShowFullScreenAd(AdView);
 }
+
+- (void)adwoFullScreenAdDismissed:(UIView*)ad
+{
+    NSLog(@"Full-screen ad closed by user!");
+    AdView = nil;
+}
+
+- (void)adwoDidPresentModalViewForAd:(UIView*)ad
+{
+    NSLog(@"Browser presented!");
+}
+
+- (void)adwoDidDismissModalViewForAd:(UIView*)ad
+{
+    NSLog(@"Browser dismissed!");
+}
+
 
 
 @end

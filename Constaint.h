@@ -16,7 +16,7 @@
 #define kIdentifyForADIAP @"com.lyn.ergerAdIap"
 #define kVIP @"isVIP"
 #define mogoId @"310533ed086343ee8b4aa996d456605c"
-#define ADWO_FSAD_TEST_MODE             NO
+#define ADWO_FSAD_TEST_MODE             YES
 #define ADWO_PUBLISH_ID_FOR_DEMO @"c3d1b7e7744a4d6283e461c23dfdcbb9"
 static NSString* const adwoResponseErrorInfoList[] = {
     @"操作成功",
