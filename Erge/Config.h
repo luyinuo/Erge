@@ -15,6 +15,7 @@
 //保存应用在商店中的的apple id
 #define AppleId @"1080868675"
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define ScrollHeight self.mainScrollView.frame.size.height
 typedef NS_ENUM(NSUInteger, DownloadStatus){
     DownloadStatusWait = 0, //队列中等待下载

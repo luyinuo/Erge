@@ -15,6 +15,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = [[[NSBundle mainBundle] loadNibNamed:@"TableViewCell" owner:nil options:nil] lastObject];
+        self.leftButton.layer.cornerRadius = 10;
+        self.leftButton.layer.masksToBounds = YES;
+        self.rightButton.layer.cornerRadius = 10;
+        self.rightButton.layer.masksToBounds = YES;
     }
     return self;
 }

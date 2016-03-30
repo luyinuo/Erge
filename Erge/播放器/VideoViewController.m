@@ -12,6 +12,7 @@
 #import "Constaint.h"
 #import "AdwoAdSDK.h"
 #import "AdwoFSAdContainer.h"
+#import "config.h"
 
 @interface VideoViewController ()<WKMPMoviePlayerControllerDelegate,WKPlayerVideoListDelegate,AWAdViewDelegate>
 {
@@ -71,7 +72,11 @@
         NSLog(@"Banner广告创建失败");
         return;
     }
-    
+    //购买消除广告则不显示广告
+    BOOL isVIP = [[NSUserDefaults standardUserDefaults] boolForKey:kVIP];
+    if (isVIP) {
+        return;
+    }
     // 设置放置Banner的位置
     mAdView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 320.0) * 0.5, [UIScreen mainScreen].bounds.size.height - 50, 320.0, 50.0);
     // 将当前的广告Banner放到父视图上
@@ -224,8 +229,14 @@
 - (void) wkMpMoviePlayerControllerClickPause
 {
     NSLog(@"pause .....");
+    //购买消除广告则不显示广告
+    BOOL isVIP = [[NSUserDefaults standardUserDefaults] boolForKey:kVIP];
+    if (isVIP) {
+        return;
+    }
     [self showFullScreenAD];
 }
+
 -(void)wkMPMoviePlayerControllerClickBack{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -234,6 +245,9 @@
     if (isFullScreen) {
         moviePlayerController.view.hidden = NO;
         [moviePlayerController.view.superview bringSubviewToFront:moviePlayerController.view];
+        if(AdView){
+            [self.view bringSubviewToFront:AdView];
+        }
     }
 }
 

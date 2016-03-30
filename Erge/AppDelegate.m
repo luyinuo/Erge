@@ -61,6 +61,11 @@ ADWO_SDK_WITHOUT_PASSKIT_FRAMEWORK(I do not need PassKit framework)
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     NSLog(@"applicationWillEnterForeground");
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"applicationWillEnterForeground" object:nil];
+    //购买消除广告则不显示广告
+    BOOL isVIP = [[NSUserDefaults standardUserDefaults] boolForKey:kVIP];
+    if (isVIP) {
+        return;
+    }
     [self showButtonTouched:nil];
 }
 

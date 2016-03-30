@@ -43,9 +43,6 @@
     [self setTabBarItemIcon:@"icon_home_h"];
     
     [self loadData];
-    //加载全屏广告
-//    [self showButtonTouched:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showButtonTouched:) name:@"applicationWillEnterForeground" object:nil];
     
 }
 - (void) dealloc

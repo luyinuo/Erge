@@ -22,7 +22,7 @@
 - (void)setTabBarItemIcon:(NSString *)icon
 {
     [self.tabBarItem setSelectedImage:[[UIImage imageNamed:icon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:251/255.0 green:156/255.0 blue:151/255.0 alpha:1]} forState:UIControlStateSelected];
+    [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

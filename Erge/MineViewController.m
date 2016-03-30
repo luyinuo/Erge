@@ -71,11 +71,7 @@
 }
 
 - (IBAction)deleteAD:(UIButton *)sender {
-    if ([SKPaymentQueue canMakePayments]) {
-        [self getProductInfo];
-    }else{
-        NSLog(@"失败，用户禁止应用内付费");
-    }
+    [self showAlertViewWith:@"AD"];
     
 }
 
@@ -110,15 +106,16 @@
             case SKPaymentTransactionStatePurchased://交易完成
                 
                 NSLog(@"交易完成 --%@",transition);
-                [self transitionCompleted];
+                [self transitionCompleted:transition];
                 break;
                 
             case SKPaymentTransactionStateFailed:
                 NSLog(@"交易失败");
+                [self failedTransaction:transition];
                 break;
             case SKPaymentTransactionStateRestored:
                 NSLog(@"已购买");
-                [self transitionRestored];
+                [self transitionRestored:transition];
                 break;
             default:
                 break;
@@ -128,18 +125,33 @@
 /**
  *  交易完成
  */
-- (void) transitionCompleted
+- (void) transitionCompleted:(SKPaymentTransaction*)transaction
 {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kVIP];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    //将完成后的交易信息移出队列
+    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 /**
  *  已购买
  */
-- (void) transitionRestored
+- (void) transitionRestored:(SKPaymentTransaction *)transaction
 {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kVIP];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    //将完成后的交易信息移出队列
+    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+}
+
+- (void)failedTransaction: (SKPaymentTransaction *)transaction
+{
+    if(transaction.error.code != SKErrorPaymentCancelled)
+    {
+        //在这类显示除用户取消之外的错误信息
+        NSLog(@"%@",transaction.error);
+    }
+    
+    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
 - (BOOL) showAlertViewWith:(NSString *) identifier
@@ -155,7 +167,14 @@
     self.isParent = ^(){
         if ([identifier isEqualToString:@"score"]) {
             [weakSelf openLink];
-        }else{
+        }else if([identifier isEqualToString:@"AD"]){
+            if ([SKPaymentQueue canMakePayments]) {
+                [weakSelf getProductInfo];
+            }else{
+                NSLog(@"失败，用户禁止应用内付费");
+            }
+        }
+        else{
             [weakSelf performSegueWithIdentifier:identifier sender:nil];
         }
         
