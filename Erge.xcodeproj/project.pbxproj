@@ -947,6 +947,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: yinuo lu (5EA84RSZ3J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: yinuo lu (5EA84RSZ3J)";
+				DEVELOPMENT_TEAM = 5EA84RSZ3J;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -961,8 +962,8 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc182b41-a858-4ddf-a335-307bd62b6e92";
-				PROVISIONING_PROFILE_SPECIFIER = com.lyn.erge.distribution;
+				PROVISIONING_PROFILE = "84551422-034c-4ae5-8ef0-27560ea7481a";
+				PROVISIONING_PROFILE_SPECIFIER = com.lyn.erge.ad_hoc;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
