@@ -26,7 +26,7 @@ ADWO_SDK_WITHOUT_PASSKIT_FRAMEWORK(I do not need PassKit framework)
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+    // Override point for customization after application launch.
     [Bmob registerWithAppKey:@"fc16b8978032b7ababb8721e77b785b1"];
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"AppInfo"];
     [bquery getObjectInBackgroundWithId:@"pyY6aaak" block:^(BmobObject *object,NSError *error){

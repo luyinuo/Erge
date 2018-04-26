@@ -32,7 +32,7 @@
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "-showButtonTouched:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,7 +48,7 @@
             startingLineNumber = "120"
             endingLineNumber = "120"
             landmarkName = "-adwoAdViewDidFailToLoadAd:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,7 +64,7 @@
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "-adwoGetBaseViewController"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
